@@ -87,21 +87,22 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__syntax__t.html">editor_syntax_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Models a syntax for a programming language.  <a href="structeditor__syntax__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8f4c528a8ea0afe3198c84d13dfb41ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syntax_8h.html#a8f4c528a8ea0afe3198c84d13dfb41ab">HL_HIGHLIGHT_NUMBERS</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
-<tr class="memdesc:a8f4c528a8ea0afe3198c84d13dfb41ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Syntax highlighting for numbers.  <a href="syntax_8h.html#a8f4c528a8ea0afe3198c84d13dfb41ab">More...</a><br /></td></tr>
-<tr class="separator:a8f4c528a8ea0afe3198c84d13dfb41ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad153e738bdfb1a7e4406bb630231e894"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syntax_8h.html#ad153e738bdfb1a7e4406bb630231e894">HL_HIGHLIGHT_STRINGS</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
-<tr class="memdesc:ad153e738bdfb1a7e4406bb630231e894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Syntax highlighting for strings.  <a href="syntax_8h.html#ad153e738bdfb1a7e4406bb630231e894">More...</a><br /></td></tr>
-<tr class="separator:ad153e738bdfb1a7e4406bb630231e894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb9acfb72ba50e03c0a87bc1e7dcfb0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syntax_8h.html#a1eb9acfb72ba50e03c0a87bc1e7dcfb0">SYNTAX_HIGHLIGHT_NUMBERS</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+<tr class="memdesc:a1eb9acfb72ba50e03c0a87bc1e7dcfb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Syntax highlighting for numbers.  <a href="syntax_8h.html#a1eb9acfb72ba50e03c0a87bc1e7dcfb0">More...</a><br /></td></tr>
+<tr class="separator:a1eb9acfb72ba50e03c0a87bc1e7dcfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71a1480aaba7bc26cfb37869f569d4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syntax_8h.html#ae71a1480aaba7bc26cfb37869f569d4e">SYNTAX_HIGHLIGHT_STRINGS</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="memdesc:ae71a1480aaba7bc26cfb37869f569d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Syntax highlighting for strings.  <a href="syntax_8h.html#ae71a1480aaba7bc26cfb37869f569d4e">More...</a><br /></td></tr>
+<tr class="separator:ae71a1480aaba7bc26cfb37869f569d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ab5583f4e615b0b91c806512b59423a7f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7f">editorHighlight</a> { <br />
-&#160;&#160;<a class="el" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa02ff0b07454ae4b83b4b30a84d322c50">HIGHT_LIGHT_NORMAL</a> = 0, 
+&#160;&#160;<a class="el" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fadd96620816cc58daa0570b04bcbccd44">HIGHTLIGHT_NORMAL</a> = 0, 
 <a class="el" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7faebd02e9835fc7dbd519db135e65c9645">HIGHLIGHT_COMMENT</a>, 
 <a class="el" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa2b382b9daf9f582feabde71d5b74f98e">HIGHLIGHT_MLCOMMENT</a>, 
 <a class="el" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa8244d4e822be0673e74571a06e510a9c">HIGHLIGHT_KEYWORDS_FIRST_GROUP</a>, 
@@ -115,11 +116,13 @@ Enumerations</h2></td></tr>
 <a class="el" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa67e2edd8fe18c071cc268f600432cbba">HIGHLIGHT_MATCH</a>
 <br />
  }</td></tr>
+<tr class="memdesc:ab5583f4e615b0b91c806512b59423a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Differnt syntax highlighting groups of the editor.  <a href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7f">More...</a><br /></td></tr>
 <tr class="separator:ab5583f4e615b0b91c806512b59423a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a63164cf9e8f6af3d68e8aadaf5d64f2e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syntax_8h.html#a63164cf9e8f6af3d68e8aadaf5d64f2e">syntax_get_language_count</a> ()</td></tr>
+<tr class="memdesc:a63164cf9e8f6af3d68e8aadaf5d64f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of languages for which syntax highlighting is provided.  <a href="syntax_8h.html#a63164cf9e8f6af3d68e8aadaf5d64f2e">More...</a><br /></td></tr>
 <tr class="separator:a63164cf9e8f6af3d68e8aadaf5d64f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa0951954ee6b1e5f0a4bc0a0569fd80"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syntax_8h.html#afa0951954ee6b1e5f0a4bc0a0569fd80">syntax_convert_to_color</a> (int highlightGroup)</td></tr>
 <tr class="memdesc:afa0951954ee6b1e5f0a4bc0a0569fd80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rgb color value of a syntax highlighting group.  <a href="syntax_8h.html#afa0951954ee6b1e5f0a4bc0a0569fd80">More...</a><br /></td></tr>
@@ -134,14 +137,14 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>File containing the declaration of the syntax highlighting functionality. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a8f4c528a8ea0afe3198c84d13dfb41ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f4c528a8ea0afe3198c84d13dfb41ab">&#9670;&nbsp;</a></span>HL_HIGHLIGHT_NUMBERS</h2>
+<a id="a1eb9acfb72ba50e03c0a87bc1e7dcfb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eb9acfb72ba50e03c0a87bc1e7dcfb0">&#9670;&nbsp;</a></span>SYNTAX_HIGHLIGHT_NUMBERS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define HL_HIGHLIGHT_NUMBERS&#160;&#160;&#160;(1 &lt;&lt; 0)</td>
+          <td class="memname">#define SYNTAX_HIGHLIGHT_NUMBERS&#160;&#160;&#160;(1 &lt;&lt; 0)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -150,14 +153,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad153e738bdfb1a7e4406bb630231e894"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad153e738bdfb1a7e4406bb630231e894">&#9670;&nbsp;</a></span>HL_HIGHLIGHT_STRINGS</h2>
+<a id="ae71a1480aaba7bc26cfb37869f569d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71a1480aaba7bc26cfb37869f569d4e">&#9670;&nbsp;</a></span>SYNTAX_HIGHLIGHT_STRINGS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define HL_HIGHLIGHT_STRINGS&#160;&#160;&#160;(1 &lt;&lt; 1)</td>
+          <td class="memname">#define SYNTAX_HIGHLIGHT_STRINGS&#160;&#160;&#160;(1 &lt;&lt; 1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -178,8 +181,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Differnt syntax highlighting groups of the editor. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab5583f4e615b0b91c806512b59423a7fa02ff0b07454ae4b83b4b30a84d322c50"></a>HIGHT_LIGHT_NORMAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab5583f4e615b0b91c806512b59423a7fadd96620816cc58daa0570b04bcbccd44"></a>HIGHTLIGHT_NORMAL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab5583f4e615b0b91c806512b59423a7faebd02e9835fc7dbd519db135e65c9645"></a>HIGHLIGHT_COMMENT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab5583f4e615b0b91c806512b59423a7fa2b382b9daf9f582feabde71d5b74f98e"></a>HIGHLIGHT_MLCOMMENT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab5583f4e615b0b91c806512b59423a7fa8244d4e822be0673e74571a06e510a9c"></a>HIGHLIGHT_KEYWORDS_FIRST_GROUP&#160;</td><td class="fielddoc"></td></tr>
@@ -235,6 +240,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the amount of languages for which syntax highlighting is provided. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of languages with syntax highlighting </dd></dl>
 
 </div>
 </div>

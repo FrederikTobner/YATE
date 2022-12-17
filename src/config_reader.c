@@ -75,10 +75,10 @@ configuration_reader_result_t * configuration_reader_read_configuration_file()
     return result;
 }
 
-/// @brief 
-/// @param fileContentPointer 
-/// @param result 
-/// @return 
+/// @brief Parses a single line in from a editor configuration file
+/// @param fileContentPointer Pointer to the pointer that points to the character sequence representing the configuration file content
+/// @param result The result of the config file reading process
+/// @return 0 if the current line is the last line in the configuration file, otherwise 1
 static int configuration_reader_parse_configuration_file_line(char ** fileContentPointer, configuration_reader_result_t ** result)
 {
     printf("%s", *fileContentPointer);
@@ -133,8 +133,8 @@ static int configuration_reader_parse_configuration_file_line(char ** fileConten
     return 1;
 }
 
-/// @brief 
-/// @param str 
+/// @brief Removes the first character in a character sequence
+/// @param str The character sequnce where the first character is removed
 static void configuration_reader_string_behead(char * str)
 {
     size_t stringLength = strlen(str);
@@ -143,8 +143,8 @@ static void configuration_reader_string_behead(char * str)
     *(str + stringLength) = '\0';
 }
 
-/// @brief 
-/// @param str 
+/// @brief Removes all the whitespace characters from the beginning and the end of a character sequence
+/// @param str The character sequence where the whitespace characters are removed
 static void configuration_reader_string_trim(char * str)
 {
 	while (isspace(str[0]) || str[0] == '\r')

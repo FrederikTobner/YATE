@@ -26,7 +26,9 @@
 /// Result of reading an editor configuration file
 typedef struct
 {
+  /// The size of a tabstop converted to whitespaces
   size_t tabStopSize;
+  /// The amount of seconds a message is diplayed within the editor, before it dissappears
   size_t messageDisplayDuration;
 } configuration_reader_result_t;
 

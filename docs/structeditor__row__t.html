@@ -68,25 +68,37 @@ $(function() {
 <div class="title">editor_row_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Models a single line that is rendered by the editor.  
+ <a href="structeditor__row__t.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ae563e9d922131e9df2b816db9a6c4380"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#ae563e9d922131e9df2b816db9a6c4380">index</a></td></tr>
-<tr class="separator:ae563e9d922131e9df2b816db9a6c4380"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8cb4651d09ceccd609523620c22a468"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#ad8cb4651d09ceccd609523620c22a468">size</a></td></tr>
-<tr class="separator:ad8cb4651d09ceccd609523620c22a468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70dba8831137ffbcf3a624f8ca79fba0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#a70dba8831137ffbcf3a624f8ca79fba0">renderSize</a></td></tr>
-<tr class="separator:a70dba8831137ffbcf3a624f8ca79fba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807a0ff5430d94465adbe7d0b7f38491"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#a807a0ff5430d94465adbe7d0b7f38491">index</a></td></tr>
+<tr class="memdesc:a807a0ff5430d94465adbe7d0b7f38491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the editor row.  <a href="structeditor__row__t.html#a807a0ff5430d94465adbe7d0b7f38491">More...</a><br /></td></tr>
+<tr class="separator:a807a0ff5430d94465adbe7d0b7f38491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ad1df416ca42a01be8b656d0f86b83"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#a81ad1df416ca42a01be8b656d0f86b83">size</a></td></tr>
+<tr class="memdesc:a81ad1df416ca42a01be8b656d0f86b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of characters stored in the underlying character buffer.  <a href="structeditor__row__t.html#a81ad1df416ca42a01be8b656d0f86b83">More...</a><br /></td></tr>
+<tr class="separator:a81ad1df416ca42a01be8b656d0f86b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7ec8e01703a5ba86a4fc08a49e97d73"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#ab7ec8e01703a5ba86a4fc08a49e97d73">renderSize</a></td></tr>
+<tr class="memdesc:ab7ec8e01703a5ba86a4fc08a49e97d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of characters stored in the render buffer, that was created with the underlying character buffer.  <a href="structeditor__row__t.html#ab7ec8e01703a5ba86a4fc08a49e97d73">More...</a><br /></td></tr>
+<tr class="separator:ab7ec8e01703a5ba86a4fc08a49e97d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba2b72d874881b861a61ace684240649"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#aba2b72d874881b861a61ace684240649">chars</a></td></tr>
+<tr class="memdesc:aba2b72d874881b861a61ace684240649"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying character buffer.  <a href="structeditor__row__t.html#aba2b72d874881b861a61ace684240649">More...</a><br /></td></tr>
 <tr class="separator:aba2b72d874881b861a61ace684240649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bac09b51a0de0f26e86b591363ba07e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#a7bac09b51a0de0f26e86b591363ba07e">render</a></td></tr>
+<tr class="memdesc:a7bac09b51a0de0f26e86b591363ba07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The render buffer, that was created with the underlying character buffer.  <a href="structeditor__row__t.html#a7bac09b51a0de0f26e86b591363ba07e">More...</a><br /></td></tr>
 <tr class="separator:a7bac09b51a0de0f26e86b591363ba07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1b9ebd57be6d1e4c053f72dfa91958"><td class="memItemLeft" align="right" valign="top">unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#a3c1b9ebd57be6d1e4c053f72dfa91958">highLight</a></td></tr>
+<tr class="memdesc:a3c1b9ebd57be6d1e4c053f72dfa91958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the words that are highlighted.  <a href="structeditor__row__t.html#a3c1b9ebd57be6d1e4c053f72dfa91958">More...</a><br /></td></tr>
 <tr class="separator:a3c1b9ebd57be6d1e4c053f72dfa91958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85fb3acea8ce09d23b1fdd2c228e0784"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#a85fb3acea8ce09d23b1fdd2c228e0784">hightLightOpenComment</a></td></tr>
-<tr class="separator:a85fb3acea8ce09d23b1fdd2c228e0784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059af4ad5a2e5469e82911406518d89a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html#a059af4ad5a2e5469e82911406518d89a">hightLightOpenComment</a></td></tr>
+<tr class="memdesc:a059af4ad5a2e5469e82911406518d89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether the row is part of a multiline comment.  <a href="structeditor__row__t.html#a059af4ad5a2e5469e82911406518d89a">More...</a><br /></td></tr>
+<tr class="separator:a059af4ad5a2e5469e82911406518d89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Models a single line that is rendered by the editor. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="aba2b72d874881b861a61ace684240649"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba2b72d874881b861a61ace684240649">&#9670;&nbsp;</a></span>chars</h2>
 
@@ -98,6 +110,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The underlying character buffer. </p>
 
 </div>
 </div>
@@ -113,33 +127,39 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Pointer to the words that are highlighted. </p>
+
 </div>
 </div>
-<a id="a85fb3acea8ce09d23b1fdd2c228e0784"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85fb3acea8ce09d23b1fdd2c228e0784">&#9670;&nbsp;</a></span>hightLightOpenComment</h2>
+<a id="a059af4ad5a2e5469e82911406518d89a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059af4ad5a2e5469e82911406518d89a">&#9670;&nbsp;</a></span>hightLightOpenComment</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_row_t::hightLightOpenComment</td>
+          <td class="memname">bool editor_row_t::hightLightOpenComment</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Determines whether the row is part of a multiline comment. </p>
+
 </div>
 </div>
-<a id="ae563e9d922131e9df2b816db9a6c4380"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae563e9d922131e9df2b816db9a6c4380">&#9670;&nbsp;</a></span>index</h2>
+<a id="a807a0ff5430d94465adbe7d0b7f38491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807a0ff5430d94465adbe7d0b7f38491">&#9670;&nbsp;</a></span>index</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_row_t::index</td>
+          <td class="memname">uint32_t editor_row_t::index</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Index of the editor row. </p>
 
 </div>
 </div>
@@ -155,33 +175,39 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The render buffer, that was created with the underlying character buffer. </p>
+
 </div>
 </div>
-<a id="a70dba8831137ffbcf3a624f8ca79fba0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70dba8831137ffbcf3a624f8ca79fba0">&#9670;&nbsp;</a></span>renderSize</h2>
+<a id="ab7ec8e01703a5ba86a4fc08a49e97d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ec8e01703a5ba86a4fc08a49e97d73">&#9670;&nbsp;</a></span>renderSize</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_row_t::renderSize</td>
+          <td class="memname">uint32_t editor_row_t::renderSize</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>The amount of characters stored in the render buffer, that was created with the underlying character buffer. </p>
+
 </div>
 </div>
-<a id="ad8cb4651d09ceccd609523620c22a468"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8cb4651d09ceccd609523620c22a468">&#9670;&nbsp;</a></span>size</h2>
+<a id="a81ad1df416ca42a01be8b656d0f86b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ad1df416ca42a01be8b656d0f86b83">&#9670;&nbsp;</a></span>size</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_row_t::size</td>
+          <td class="memname">uint32_t editor_row_t::size</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The amount of characters stored in the underlying character buffer. </p>
 
 </div>
 </div>

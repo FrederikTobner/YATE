@@ -69,7 +69,6 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -84,9 +83,11 @@ $(function() {
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;fcntl.h&gt;</code><br />
-<code>#include &lt;stdarg.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;limits.h&gt;</code><br />
+<code>#include &lt;stdarg.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;sys/ioctl.h&gt;</code><br />
@@ -102,15 +103,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__row__t.html">editor_row_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Models a single line that is rendered by the editor.  <a href="structeditor__row__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html">editor_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Models the current state of the editor.  <a href="structeditor__config__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:acc269b479b18fbda6ce99bd682d2280e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#acc269b479b18fbda6ce99bd682d2280e">TAB_STOP</a>&#160;&#160;&#160;(4)</td></tr>
-<tr class="memdesc:acc269b479b18fbda6ce99bd682d2280e"><td class="mdescLeft">&#160;</td><td class="mdescRight">default size of tab stop  <a href="editor_8c.html#acc269b479b18fbda6ce99bd682d2280e">More...</a><br /></td></tr>
-<tr class="separator:acc269b479b18fbda6ce99bd682d2280e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03d3f54c622fea475aef39f7195ec842"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a03d3f54c622fea475aef39f7195ec842">QUIT_TIMES</a>&#160;&#160;&#160;(3)</td></tr>
 <tr class="memdesc:a03d3f54c622fea475aef39f7195ec842"><td class="mdescLeft">&#160;</td><td class="mdescRight">To quit with unsaved changes the quit command must be entered three times.  <a href="editor_8c.html#a03d3f54c622fea475aef39f7195ec842">More...</a><br /></td></tr>
 <tr class="separator:a03d3f54c622fea475aef39f7195ec842"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,11 +120,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a5b85bb93e7ec22ce09441eb5704dbaf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a5b85bb93e7ec22ce09441eb5704dbaf8">APPENDBUFFER_INIT</a></td></tr>
 <tr class="memdesc:a5b85bb93e7ec22ce09441eb5704dbaf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes append buffer.  <a href="editor_8c.html#a5b85bb93e7ec22ce09441eb5704dbaf8">More...</a><br /></td></tr>
 <tr class="separator:a5b85bb93e7ec22ce09441eb5704dbaf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:af570fdb342c486e354886448d60e599c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structeditor__row__t.html">editor_row_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#af570fdb342c486e354886448d60e599c">editor_row_t</a></td></tr>
-<tr class="separator:af570fdb342c486e354886448d60e599c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -143,6 +138,7 @@ Enumerations</h2></td></tr>
 <a class="el" href="editor_8c.html#afc98e1836253d54640dce00e325aa284a714c5d27586a8bcbab274d9176da1539">PAGE_DOWN</a>
 <br />
  }</td></tr>
+<tr class="memdesc:afc98e1836253d54640dce00e325aa284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special control characters.  <a href="editor_8c.html#afc98e1836253d54640dce00e325aa284">More...</a><br /></td></tr>
 <tr class="separator:afc98e1836253d54640dce00e325aa284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -156,9 +152,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2b9fd3ce5bfed1d4db3232bc65571318"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a2b9fd3ce5bfed1d4db3232bc65571318">editor_delete_character</a> ()</td></tr>
 <tr class="memdesc:a2b9fd3ce5bfed1d4db3232bc65571318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the character at the current curser poisition.  <a href="editor_8c.html#a2b9fd3ce5bfed1d4db3232bc65571318">More...</a><br /></td></tr>
 <tr class="separator:a2b9fd3ce5bfed1d4db3232bc65571318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a114d270f0652a8b3cd3ca9f3c170b2a1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a114d270f0652a8b3cd3ca9f3c170b2a1">editor_delete_row</a> (int at)</td></tr>
-<tr class="memdesc:a114d270f0652a8b3cd3ca9f3c170b2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a complete row in the editor.  <a href="editor_8c.html#a114d270f0652a8b3cd3ca9f3c170b2a1">More...</a><br /></td></tr>
-<tr class="separator:a114d270f0652a8b3cd3ca9f3c170b2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ca6e75a9152905b0b4f822ab1e4c9b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ac8ca6e75a9152905b0b4f822ab1e4c9b">editor_delete_row</a> (uint32_t at)</td></tr>
+<tr class="memdesc:ac8ca6e75a9152905b0b4f822ab1e4c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a complete row in the editor.  <a href="editor_8c.html#ac8ca6e75a9152905b0b4f822ab1e4c9b">More...</a><br /></td></tr>
+<tr class="separator:ac8ca6e75a9152905b0b4f822ab1e4c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac40c3ed3148f40a1f91b0dade68cc683"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ac40c3ed3148f40a1f91b0dade68cc683">editor_draw_message_bar</a> (<a class="el" href="structappend__buffer__t.html">append_buffer_t</a> *buffer)</td></tr>
 <tr class="memdesc:ac40c3ed3148f40a1f91b0dade68cc683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the message bar of the editor.  <a href="editor_8c.html#ac40c3ed3148f40a1f91b0dade68cc683">More...</a><br /></td></tr>
 <tr class="separator:ac40c3ed3148f40a1f91b0dade68cc683"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,72 +167,72 @@ Functions</h2></td></tr>
 <tr class="memitem:a3341662cbd7159b06ca20f1a2778eead"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a3341662cbd7159b06ca20f1a2778eead">editor_find</a> ()</td></tr>
 <tr class="memdesc:a3341662cbd7159b06ca20f1a2778eead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds all occurences of a word in the currently oppend source file.  <a href="editor_8c.html#a3341662cbd7159b06ca20f1a2778eead">More...</a><br /></td></tr>
 <tr class="separator:a3341662cbd7159b06ca20f1a2778eead"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77fb40f4cd09adc547f44c73a535dd38"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a77fb40f4cd09adc547f44c73a535dd38">editor_find_callback</a> (char *query, int key)</td></tr>
-<tr class="memdesc:a77fb40f4cd09adc547f44c73a535dd38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback of the find function.  <a href="editor_8c.html#a77fb40f4cd09adc547f44c73a535dd38">More...</a><br /></td></tr>
-<tr class="separator:a77fb40f4cd09adc547f44c73a535dd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4636cb36da9497d893206be985e894f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ac4636cb36da9497d893206be985e894f">editor_find_callback</a> (char *query, uint32_t key)</td></tr>
+<tr class="memdesc:ac4636cb36da9497d893206be985e894f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback of the find function.  <a href="editor_8c.html#ac4636cb36da9497d893206be985e894f">More...</a><br /></td></tr>
+<tr class="separator:ac4636cb36da9497d893206be985e894f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dcacdbd67c4d2a0b48205282a3c2805"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a4dcacdbd67c4d2a0b48205282a3c2805">editor_free_row</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row)</td></tr>
 <tr class="memdesc:a4dcacdbd67c4d2a0b48205282a3c2805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the contents of a single row.  <a href="editor_8c.html#a4dcacdbd67c4d2a0b48205282a3c2805">More...</a><br /></td></tr>
 <tr class="separator:a4dcacdbd67c4d2a0b48205282a3c2805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf765e8661fac1d84453cc9efaf202ce"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#acf765e8661fac1d84453cc9efaf202ce">editor_get_cursor_position</a> (int *rows, int *columns)</td></tr>
-<tr class="memdesc:acf765e8661fac1d84453cc9efaf202ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the position of the curser.  <a href="editor_8c.html#acf765e8661fac1d84453cc9efaf202ce">More...</a><br /></td></tr>
-<tr class="separator:acf765e8661fac1d84453cc9efaf202ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc72913b361f1fed1e697fade05b2d3c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#afc72913b361f1fed1e697fade05b2d3c">editor_get_window_size</a> (int *rows, int *columns)</td></tr>
-<tr class="memdesc:afc72913b361f1fed1e697fade05b2d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the size of the display window in the terminal.  <a href="editor_8c.html#afc72913b361f1fed1e697fade05b2d3c">More...</a><br /></td></tr>
-<tr class="separator:afc72913b361f1fed1e697fade05b2d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac0275529819324bf4cf772d209de1d1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#aac0275529819324bf4cf772d209de1d1">editor_insert_character</a> (int c)</td></tr>
-<tr class="memdesc:aac0275529819324bf4cf772d209de1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a character at the current position.  <a href="editor_8c.html#aac0275529819324bf4cf772d209de1d1">More...</a><br /></td></tr>
-<tr class="separator:aac0275529819324bf4cf772d209de1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7ef658438fe012236ec9b6c610c3de"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a3c7ef658438fe012236ec9b6c610c3de">editor_get_cursor_position</a> (uint32_t *rows, uint32_t *columns)</td></tr>
+<tr class="memdesc:a3c7ef658438fe012236ec9b6c610c3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the position of the curser.  <a href="editor_8c.html#a3c7ef658438fe012236ec9b6c610c3de">More...</a><br /></td></tr>
+<tr class="separator:a3c7ef658438fe012236ec9b6c610c3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a068be94ff34edb335bf323022b7cb821"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a068be94ff34edb335bf323022b7cb821">editor_get_window_size</a> (uint32_t *rows, uint32_t *columns)</td></tr>
+<tr class="memdesc:a068be94ff34edb335bf323022b7cb821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the size of the display window in the terminal.  <a href="editor_8c.html#a068be94ff34edb335bf323022b7cb821">More...</a><br /></td></tr>
+<tr class="separator:a068be94ff34edb335bf323022b7cb821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dcc69bb821cddd94557a10961e7c8aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a0dcc69bb821cddd94557a10961e7c8aa">editor_insert_character</a> (uint32_t c)</td></tr>
+<tr class="memdesc:a0dcc69bb821cddd94557a10961e7c8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a character at the current position.  <a href="editor_8c.html#a0dcc69bb821cddd94557a10961e7c8aa">More...</a><br /></td></tr>
+<tr class="separator:a0dcc69bb821cddd94557a10961e7c8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b0d12b88e42b7888e05a702af164dff"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a0b0d12b88e42b7888e05a702af164dff">editor_insert_newline</a> ()</td></tr>
 <tr class="memdesc:a0b0d12b88e42b7888e05a702af164dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a new line a the current cursor position.  <a href="editor_8c.html#a0b0d12b88e42b7888e05a702af164dff">More...</a><br /></td></tr>
 <tr class="separator:a0b0d12b88e42b7888e05a702af164dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42a02ea2114c06044833bd6c5fd318af"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a42a02ea2114c06044833bd6c5fd318af">editor_insert_row</a> (int at, char *str, size_t length)</td></tr>
-<tr class="memdesc:a42a02ea2114c06044833bd6c5fd318af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a new row into the character buffer.  <a href="editor_8c.html#a42a02ea2114c06044833bd6c5fd318af">More...</a><br /></td></tr>
-<tr class="separator:a42a02ea2114c06044833bd6c5fd318af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2482eaded555245487b4415bcd3d7076"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a2482eaded555245487b4415bcd3d7076">editor_is_separator</a> (int c)</td></tr>
-<tr class="memdesc:a2482eaded555245487b4415bcd3d7076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether a character is a seperator.  <a href="editor_8c.html#a2482eaded555245487b4415bcd3d7076">More...</a><br /></td></tr>
-<tr class="separator:a2482eaded555245487b4415bcd3d7076"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66a0295bd367ca3e9ee248c59860582"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ae66a0295bd367ca3e9ee248c59860582">editor_move_cursor</a> (int key)</td></tr>
-<tr class="memdesc:ae66a0295bd367ca3e9ee248c59860582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the cursor based on the input.  <a href="editor_8c.html#ae66a0295bd367ca3e9ee248c59860582">More...</a><br /></td></tr>
-<tr class="separator:ae66a0295bd367ca3e9ee248c59860582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1805f96f0edcad60409b7a7c865c1610"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a1805f96f0edcad60409b7a7c865c1610">editor_insert_row</a> (uint32_t at, char *str, size_t length)</td></tr>
+<tr class="memdesc:a1805f96f0edcad60409b7a7c865c1610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a new row into the character buffer.  <a href="editor_8c.html#a1805f96f0edcad60409b7a7c865c1610">More...</a><br /></td></tr>
+<tr class="separator:a1805f96f0edcad60409b7a7c865c1610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37e2d54fcf702fc595780437df9d3d4e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a37e2d54fcf702fc595780437df9d3d4e">editor_is_separator</a> (uint32_t c)</td></tr>
+<tr class="memdesc:a37e2d54fcf702fc595780437df9d3d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether a character is a seperator.  <a href="editor_8c.html#a37e2d54fcf702fc595780437df9d3d4e">More...</a><br /></td></tr>
+<tr class="separator:a37e2d54fcf702fc595780437df9d3d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb07892f43e846b5254fd89682d40e7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#aabb07892f43e846b5254fd89682d40e7">editor_move_cursor</a> (uint32_t key)</td></tr>
+<tr class="memdesc:aabb07892f43e846b5254fd89682d40e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the cursor based on the input.  <a href="editor_8c.html#aabb07892f43e846b5254fd89682d40e7">More...</a><br /></td></tr>
+<tr class="separator:aabb07892f43e846b5254fd89682d40e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64480f836e83cfec7fe636ae72a28c04"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a64480f836e83cfec7fe636ae72a28c04">editor_open_file</a> ()</td></tr>
 <tr class="memdesc:a64480f836e83cfec7fe636ae72a28c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens another file in the editor.  <a href="editor_8c.html#a64480f836e83cfec7fe636ae72a28c04">More...</a><br /></td></tr>
 <tr class="separator:a64480f836e83cfec7fe636ae72a28c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a237f4e3ff97b3ed21d86222f9034b5a2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a237f4e3ff97b3ed21d86222f9034b5a2">editor_open_file_callback</a> (char *query, int key)</td></tr>
-<tr class="memdesc:a237f4e3ff97b3ed21d86222f9034b5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback of the open file fuction.  <a href="editor_8c.html#a237f4e3ff97b3ed21d86222f9034b5a2">More...</a><br /></td></tr>
-<tr class="separator:a237f4e3ff97b3ed21d86222f9034b5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d53fbc7795a0bed73b26d3862bc9b85"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a5d53fbc7795a0bed73b26d3862bc9b85">editor_open_file_callback</a> (char *query, uint32_t key)</td></tr>
+<tr class="memdesc:a5d53fbc7795a0bed73b26d3862bc9b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback of the open file fuction.  <a href="editor_8c.html#a5d53fbc7795a0bed73b26d3862bc9b85">More...</a><br /></td></tr>
+<tr class="separator:a5d53fbc7795a0bed73b26d3862bc9b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabdb240cb0011ed52a10f1bd4d75576a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#aabdb240cb0011ed52a10f1bd4d75576a">editor_paste_line</a> ()</td></tr>
 <tr class="memdesc:aabdb240cb0011ed52a10f1bd4d75576a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pastes the content that is stroed in the copy buffer at the current position of the curser.  <a href="editor_8c.html#aabdb240cb0011ed52a10f1bd4d75576a">More...</a><br /></td></tr>
 <tr class="separator:aabdb240cb0011ed52a10f1bd4d75576a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b2429b391b14f3946f51a2e2027bf97"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a1b2429b391b14f3946f51a2e2027bf97">editor_prompt</a> (char *prompt, void(*callback)(char *, int))</td></tr>
-<tr class="memdesc:a1b2429b391b14f3946f51a2e2027bf97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the editor prompt.  <a href="editor_8c.html#a1b2429b391b14f3946f51a2e2027bf97">More...</a><br /></td></tr>
-<tr class="separator:a1b2429b391b14f3946f51a2e2027bf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6482a5997b3d325c2bf19d92c12c02a"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ab6482a5997b3d325c2bf19d92c12c02a">editor_prompt</a> (char *prompt, void(*callback)(char *, uint32_t))</td></tr>
+<tr class="memdesc:ab6482a5997b3d325c2bf19d92c12c02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the editor prompt.  <a href="editor_8c.html#ab6482a5997b3d325c2bf19d92c12c02a">More...</a><br /></td></tr>
+<tr class="separator:ab6482a5997b3d325c2bf19d92c12c02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff631392af87042719d1c7c1f3365dbb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#aff631392af87042719d1c7c1f3365dbb">editor_quit</a> ()</td></tr>
 <tr class="memdesc:aff631392af87042719d1c7c1f3365dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quits the editor.  <a href="editor_8c.html#aff631392af87042719d1c7c1f3365dbb">More...</a><br /></td></tr>
 <tr class="separator:aff631392af87042719d1c7c1f3365dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a818f9c4b6c309358068922c8163b6107"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a818f9c4b6c309358068922c8163b6107">editor_read_key</a> ()</td></tr>
-<tr class="memdesc:a818f9c4b6c309358068922c8163b6107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a single character from the keyboard.  <a href="editor_8c.html#a818f9c4b6c309358068922c8163b6107">More...</a><br /></td></tr>
-<tr class="separator:a818f9c4b6c309358068922c8163b6107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6656d456a16730f6971073af01750afc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a6656d456a16730f6971073af01750afc">editor_render_welcome_screen_row</a> (<a class="el" href="structappend__buffer__t.html">append_buffer_t</a> *buffer, int rowIndex)</td></tr>
-<tr class="memdesc:a6656d456a16730f6971073af01750afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a single row of the welcome screen to a given append buffer.  <a href="editor_8c.html#a6656d456a16730f6971073af01750afc">More...</a><br /></td></tr>
-<tr class="separator:a6656d456a16730f6971073af01750afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af7ececcb9c03a6585d53a211776d0e"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a0af7ececcb9c03a6585d53a211776d0e">editor_read_key</a> ()</td></tr>
+<tr class="memdesc:a0af7ececcb9c03a6585d53a211776d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a single character from the keyboard.  <a href="editor_8c.html#a0af7ececcb9c03a6585d53a211776d0e">More...</a><br /></td></tr>
+<tr class="separator:a0af7ececcb9c03a6585d53a211776d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a987e0a29e15892160231531ee39db"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a23a987e0a29e15892160231531ee39db">editor_render_welcome_screen_row</a> (<a class="el" href="structappend__buffer__t.html">append_buffer_t</a> *buffer, uint32_t rowIndex)</td></tr>
+<tr class="memdesc:a23a987e0a29e15892160231531ee39db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a single row of the welcome screen to a given append buffer.  <a href="editor_8c.html#a23a987e0a29e15892160231531ee39db">More...</a><br /></td></tr>
+<tr class="separator:a23a987e0a29e15892160231531ee39db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6d306092596e34603e71aa41b8b0be7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ad6d306092596e34603e71aa41b8b0be7">editor_row_append_string</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row, char *str, size_t length)</td></tr>
 <tr class="memdesc:ad6d306092596e34603e71aa41b8b0be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a character sequence to an editor row.  <a href="editor_8c.html#ad6d306092596e34603e71aa41b8b0be7">More...</a><br /></td></tr>
 <tr class="separator:ad6d306092596e34603e71aa41b8b0be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a584ac397995195788214b41face90798"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a584ac397995195788214b41face90798">editor_row_cx_to_rx</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row, int currentX)</td></tr>
-<tr class="memdesc:a584ac397995195788214b41face90798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translates the a horizontal coordinate from the underlying character pointer to the renderer coordinate.  <a href="editor_8c.html#a584ac397995195788214b41face90798">More...</a><br /></td></tr>
-<tr class="separator:a584ac397995195788214b41face90798"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88ec9be7bde86381703cb6286f3ffaeb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a88ec9be7bde86381703cb6286f3ffaeb">editor_row_delete_character</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row, int at)</td></tr>
-<tr class="memdesc:a88ec9be7bde86381703cb6286f3ffaeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a single character from an editor row.  <a href="editor_8c.html#a88ec9be7bde86381703cb6286f3ffaeb">More...</a><br /></td></tr>
-<tr class="separator:a88ec9be7bde86381703cb6286f3ffaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14518878ce2491fdc3ad729f6ad3f08d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a14518878ce2491fdc3ad729f6ad3f08d">editor_row_insert_character</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row, int at, int c)</td></tr>
-<tr class="memdesc:a14518878ce2491fdc3ad729f6ad3f08d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a single character in an editor row.  <a href="editor_8c.html#a14518878ce2491fdc3ad729f6ad3f08d">More...</a><br /></td></tr>
-<tr class="separator:a14518878ce2491fdc3ad729f6ad3f08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c20d548bb021ddaa34a0e9eae7eab92"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a1c20d548bb021ddaa34a0e9eae7eab92">editor_row_rx_to_cx</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row, int renderX)</td></tr>
-<tr class="memdesc:a1c20d548bb021ddaa34a0e9eae7eab92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translates a render coordinate into a coordinate of the underlying character buffer.  <a href="editor_8c.html#a1c20d548bb021ddaa34a0e9eae7eab92">More...</a><br /></td></tr>
-<tr class="separator:a1c20d548bb021ddaa34a0e9eae7eab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a469504d2100ee4639ea8b939fa473f14"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a469504d2100ee4639ea8b939fa473f14">editor_rows_to_string</a> (int *bufferLength)</td></tr>
-<tr class="memdesc:a469504d2100ee4639ea8b939fa473f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coverts the rows of the editor to a character sequence and returns a pointer to the begining of that sequence.  <a href="editor_8c.html#a469504d2100ee4639ea8b939fa473f14">More...</a><br /></td></tr>
-<tr class="separator:a469504d2100ee4639ea8b939fa473f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ea753b7a9bae923c7e458d2bc41418"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a58ea753b7a9bae923c7e458d2bc41418">editor_row_cx_to_rx</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row, uint32_t cursorCurrentX)</td></tr>
+<tr class="memdesc:a58ea753b7a9bae923c7e458d2bc41418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translates the a horizontal coordinate from the underlying character pointer to the renderer coordinate.  <a href="editor_8c.html#a58ea753b7a9bae923c7e458d2bc41418">More...</a><br /></td></tr>
+<tr class="separator:a58ea753b7a9bae923c7e458d2bc41418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad68d1b4bac6430289b98675afc574fd8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ad68d1b4bac6430289b98675afc574fd8">editor_row_delete_character</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row, uint32_t at)</td></tr>
+<tr class="memdesc:ad68d1b4bac6430289b98675afc574fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a single character from an editor row.  <a href="editor_8c.html#ad68d1b4bac6430289b98675afc574fd8">More...</a><br /></td></tr>
+<tr class="separator:ad68d1b4bac6430289b98675afc574fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb35e66b78c3b4b16c16bde144dd194"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a2cb35e66b78c3b4b16c16bde144dd194">editor_row_insert_character</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row, uint32_t at, uint32_t c)</td></tr>
+<tr class="memdesc:a2cb35e66b78c3b4b16c16bde144dd194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a single character in an editor row.  <a href="editor_8c.html#a2cb35e66b78c3b4b16c16bde144dd194">More...</a><br /></td></tr>
+<tr class="separator:a2cb35e66b78c3b4b16c16bde144dd194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0ef8c0e864fb552a2b1dc6ba80390f"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a9c0ef8c0e864fb552a2b1dc6ba80390f">editor_row_rx_to_cx</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row, uint32_t renderX)</td></tr>
+<tr class="memdesc:a9c0ef8c0e864fb552a2b1dc6ba80390f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translates a render coordinate into a coordinate of the underlying character buffer.  <a href="editor_8c.html#a9c0ef8c0e864fb552a2b1dc6ba80390f">More...</a><br /></td></tr>
+<tr class="separator:a9c0ef8c0e864fb552a2b1dc6ba80390f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87811541f32b4fbec28abe20d472d068"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a87811541f32b4fbec28abe20d472d068">editor_rows_to_string</a> (uint32_t *bufferLength)</td></tr>
+<tr class="memdesc:a87811541f32b4fbec28abe20d472d068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coverts the rows of the editor to a character sequence and returns a pointer to the begining of that sequence.  <a href="editor_8c.html#a87811541f32b4fbec28abe20d472d068">More...</a><br /></td></tr>
+<tr class="separator:a87811541f32b4fbec28abe20d472d068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac151d0ea50cac5f578549ab53cb5e446"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ac151d0ea50cac5f578549ab53cb5e446">editor_save</a> ()</td></tr>
 <tr class="memdesc:ac151d0ea50cac5f578549ab53cb5e446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the file that is currently opened.  <a href="editor_8c.html#ac151d0ea50cac5f578549ab53cb5e446">More...</a><br /></td></tr>
 <tr class="separator:ac151d0ea50cac5f578549ab53cb5e446"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,10 +245,14 @@ Functions</h2></td></tr>
 <tr class="memitem:aff1b6849c5abb263f4710f1cbde1ec0b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#aff1b6849c5abb263f4710f1cbde1ec0b">editor_set_status_message</a> (char const *format,...)</td></tr>
 <tr class="memdesc:aff1b6849c5abb263f4710f1cbde1ec0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the message that is displayed in the status bar.  <a href="editor_8c.html#aff1b6849c5abb263f4710f1cbde1ec0b">More...</a><br /></td></tr>
 <tr class="separator:aff1b6849c5abb263f4710f1cbde1ec0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9b0b9e4b0a86c7d6b15d653cf94aa6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#aaa9b0b9e4b0a86c7d6b15d653cf94aa6">editor_show_help</a> ()</td></tr>
+<tr class="memdesc:aaa9b0b9e4b0a86c7d6b15d653cf94aa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows the hotkeys of the editor as a status message.  <a href="editor_8c.html#aaa9b0b9e4b0a86c7d6b15d653cf94aa6">More...</a><br /></td></tr>
+<tr class="separator:aaa9b0b9e4b0a86c7d6b15d653cf94aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef4b49935af46c49343bf60ad1448ba7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#aef4b49935af46c49343bf60ad1448ba7">editor_update_row</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row)</td></tr>
+<tr class="memdesc:aef4b49935af46c49343bf60ad1448ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the contents that are diplayed by a single editor row.  <a href="editor_8c.html#aef4b49935af46c49343bf60ad1448ba7">More...</a><br /></td></tr>
 <tr class="separator:aef4b49935af46c49343bf60ad1448ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1240e11608c0477783a9ee55efceffef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a1240e11608c0477783a9ee55efceffef">editor_update_syntax</a> (<a class="el" href="structeditor__row__t.html">editor_row_t</a> *row)</td></tr>
-<tr class="memdesc:a1240e11608c0477783a9ee55efceffef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updatees the syntax highlighting for a given editor row.  <a href="editor_8c.html#a1240e11608c0477783a9ee55efceffef">More...</a><br /></td></tr>
+<tr class="memdesc:a1240e11608c0477783a9ee55efceffef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the syntax highlighting for a given editor row.  <a href="editor_8c.html#a1240e11608c0477783a9ee55efceffef">More...</a><br /></td></tr>
 <tr class="separator:a1240e11608c0477783a9ee55efceffef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a854e82377b07270590aa27d69ed60b48"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a854e82377b07270590aa27d69ed60b48">editor_yank_line</a> ()</td></tr>
 <tr class="memdesc:a854e82377b07270590aa27d69ed60b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yanks the line the cursor is currently positioned in.  <a href="editor_8c.html#a854e82377b07270590aa27d69ed60b48">More...</a><br /></td></tr>
@@ -260,27 +260,30 @@ Functions</h2></td></tr>
 <tr class="memitem:a0aac86d95ccb32ef52240c52d1cb0ed6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a0aac86d95ccb32ef52240c52d1cb0ed6">editor_enable_raw_mode</a> ()</td></tr>
 <tr class="memdesc:a0aac86d95ccb32ef52240c52d1cb0ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables raw mode.  <a href="editor_8c.html#a0aac86d95ccb32ef52240c52d1cb0ed6">More...</a><br /></td></tr>
 <tr class="separator:a0aac86d95ccb32ef52240c52d1cb0ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa94b93982350084b4b63a31e3a68b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a5aa94b93982350084b4b63a31e3a68b1">editor_initialize</a> ()</td></tr>
-<tr class="separator:a5aa94b93982350084b4b63a31e3a68b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f3588d65437046bb0a1545d9f68c1f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a9f3588d65437046bb0a1545d9f68c1f1">editor_initialize</a> (<a class="el" href="structconfiguration__reader__result__t.html">configuration_reader_result_t</a> *config)</td></tr>
+<tr class="memdesc:a9f3588d65437046bb0a1545d9f68c1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the editor.  <a href="editor_8c.html#a9f3588d65437046bb0a1545d9f68c1f1">More...</a><br /></td></tr>
+<tr class="separator:a9f3588d65437046bb0a1545d9f68c1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27704e3280b55b32ff7c4192850aa472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a27704e3280b55b32ff7c4192850aa472">editor_open</a> (char const *filePath)</td></tr>
+<tr class="memdesc:a27704e3280b55b32ff7c4192850aa472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a file and renders the content of the file.  <a href="editor_8c.html#a27704e3280b55b32ff7c4192850aa472">More...</a><br /></td></tr>
 <tr class="separator:a27704e3280b55b32ff7c4192850aa472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">editor_process_keypress</a> ()</td></tr>
+<tr class="memdesc:a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes a single keypress.  <a href="editor_8c.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">More...</a><br /></td></tr>
 <tr class="separator:a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e241125e49d43bfb08d9509915dd406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a5e241125e49d43bfb08d9509915dd406">editor_refresh_screen</a> ()</td></tr>
+<tr class="memdesc:a5e241125e49d43bfb08d9509915dd406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refreshes the content that is rendered by the editor.  <a href="editor_8c.html#a5e241125e49d43bfb08d9509915dd406">More...</a><br /></td></tr>
 <tr class="separator:a5e241125e49d43bfb08d9509915dd406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82b504d26d915c62f6c452b9519f04e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#a82b504d26d915c62f6c452b9519f04e4">editor_show_help</a> ()</td></tr>
-<tr class="separator:a82b504d26d915c62f6c452b9519f04e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ac202057a8bed4e3c46bd968ad096a491"><td class="memItemLeft" align="right" valign="top">struct termios&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ac202057a8bed4e3c46bd968ad096a491">originalTermios</a></td></tr>
+<tr class="memdesc:ac202057a8bed4e3c46bd968ad096a491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to store the state of the terminal when Yate was invoked, so we can revert it to it's original state.  <a href="editor_8c.html#ac202057a8bed4e3c46bd968ad096a491">More...</a><br /></td></tr>
 <tr class="separator:ac202057a8bed4e3c46bd968ad096a491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9664e3963948ee7743b3f74a1e76677"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeditor__config__t.html">editor_config_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#aa9664e3963948ee7743b3f74a1e76677">editorConfig</a></td></tr>
+<tr class="memdesc:aa9664e3963948ee7743b3f74a1e76677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global state of the editor.  <a href="editor_8c.html#aa9664e3963948ee7743b3f74a1e76677">More...</a><br /></td></tr>
 <tr class="separator:aa9664e3963948ee7743b3f74a1e76677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>File containing the implementation of the editor functionality. </p>
-<p>File containing the declarations of the editor functionality.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5b85bb93e7ec22ce09441eb5704dbaf8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b85bb93e7ec22ce09441eb5704dbaf8">&#9670;&nbsp;</a></span>APPENDBUFFER_INIT</h2>
@@ -337,37 +340,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acc269b479b18fbda6ce99bd682d2280e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc269b479b18fbda6ce99bd682d2280e">&#9670;&nbsp;</a></span>TAB_STOP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TAB_STOP&#160;&#160;&#160;(4)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>default size of tab stop </p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="af570fdb342c486e354886448d60e599c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af570fdb342c486e354886448d60e599c">&#9670;&nbsp;</a></span>editor_row_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structeditor__row__t.html">editor_row_t</a> <a class="el" href="structeditor__row__t.html">editor_row_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="afc98e1836253d54640dce00e325aa284"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc98e1836253d54640dce00e325aa284">&#9670;&nbsp;</a></span>editorKey</h2>
@@ -380,17 +352,29 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Special control characters. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284ad2534cebcf6f430484b7c931dd657ddc"></a>BACKSPACE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284ab313b64675c3e4a36ac01132126d3c01"></a>ARROW_LEFT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a6a5a02b3e54e60d47280bf250e2186bc"></a>ARROW_RIGHT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284ab47be4e7317d7a539adaebd5eeeef427"></a>ARROW_UP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a351bb4dabfe58b550f1a5a1c8bb58e46"></a>ARROW_DOWN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a240efca8114fafb5e8dc8512f15301bf"></a>DEL_KEY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284aad81a36193ad805db56f8d06c6210d2c"></a>END_KEY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284adbfee56bbc71c97e2ed80ba44706581b"></a>HOME_KEY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a0442824c041b9618cd7c512205e7e6dc"></a>PAGE_UP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a714c5d27586a8bcbab274d9176da1539"></a>PAGE_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284ad2534cebcf6f430484b7c931dd657ddc"></a>BACKSPACE&#160;</td><td class="fielddoc"><p>The backspace key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284ab313b64675c3e4a36ac01132126d3c01"></a>ARROW_LEFT&#160;</td><td class="fielddoc"><p>Left arrow key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a6a5a02b3e54e60d47280bf250e2186bc"></a>ARROW_RIGHT&#160;</td><td class="fielddoc"><p>Right arrow key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284ab47be4e7317d7a539adaebd5eeeef427"></a>ARROW_UP&#160;</td><td class="fielddoc"><p>Up arrow key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a351bb4dabfe58b550f1a5a1c8bb58e46"></a>ARROW_DOWN&#160;</td><td class="fielddoc"><p>Down arrow key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a240efca8114fafb5e8dc8512f15301bf"></a>DEL_KEY&#160;</td><td class="fielddoc"><p>Delete key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284aad81a36193ad805db56f8d06c6210d2c"></a>END_KEY&#160;</td><td class="fielddoc"><p>End key (jumps to the end of the line) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284adbfee56bbc71c97e2ed80ba44706581b"></a>HOME_KEY&#160;</td><td class="fielddoc"><p>Home key (jumps to the beginning of the line) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a0442824c041b9618cd7c512205e7e6dc"></a>PAGE_UP&#160;</td><td class="fielddoc"><p>Page up key - used for scrolling up. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc98e1836253d54640dce00e325aa284a714c5d27586a8bcbab274d9176da1539"></a>PAGE_DOWN&#160;</td><td class="fielddoc"><p>Page up key - used for scrolling down. </p>
+</td></tr>
 </table>
 
 </div>
@@ -423,8 +407,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a114d270f0652a8b3cd3ca9f3c170b2a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a114d270f0652a8b3cd3ca9f3c170b2a1">&#9670;&nbsp;</a></span>editor_delete_row()</h2>
+<a id="ac8ca6e75a9152905b0b4f822ab1e4c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8ca6e75a9152905b0b4f822ab1e4c9b">&#9670;&nbsp;</a></span>editor_delete_row()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,7 +419,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static void editor_delete_row </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>at</em></td><td>)</td>
           <td></td>
         </tr>
@@ -476,7 +460,7 @@ Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -509,7 +493,7 @@ Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -636,6 +620,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enables raw mode. </p>
+<p>Enables raw mode for the current terminal session instead of canonical mode.</p>
 <p>By default the terminal starts in canonical mode. Iput is only sent when the user presses enter </p>
 
 </div>
@@ -667,8 +652,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a77fb40f4cd09adc547f44c73a535dd38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77fb40f4cd09adc547f44c73a535dd38">&#9670;&nbsp;</a></span>editor_find_callback()</h2>
+<a id="ac4636cb36da9497d893206be985e894f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4636cb36da9497d893206be985e894f">&#9670;&nbsp;</a></span>editor_find_callback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -685,7 +670,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>key</em>&#160;</td>
         </tr>
         <tr>
@@ -731,7 +716,7 @@ Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -746,8 +731,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acf765e8661fac1d84453cc9efaf202ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf765e8661fac1d84453cc9efaf202ce">&#9670;&nbsp;</a></span>editor_get_cursor_position()</h2>
+<a id="a3c7ef658438fe012236ec9b6c610c3de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7ef658438fe012236ec9b6c610c3de">&#9670;&nbsp;</a></span>editor_get_cursor_position()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -756,15 +741,15 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int editor_get_cursor_position </td>
+          <td class="memname">static int32_t editor_get_cursor_position </td>
           <td>(</td>
-          <td class="paramtype">int *&#160;</td>
+          <td class="paramtype">uint32_t *&#160;</td>
           <td class="paramname"><em>rows</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *&#160;</td>
+          <td class="paramtype">uint32_t *&#160;</td>
           <td class="paramname"><em>columns</em>&#160;</td>
         </tr>
         <tr>
@@ -792,8 +777,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="afc72913b361f1fed1e697fade05b2d3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc72913b361f1fed1e697fade05b2d3c">&#9670;&nbsp;</a></span>editor_get_window_size()</h2>
+<a id="a068be94ff34edb335bf323022b7cb821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a068be94ff34edb335bf323022b7cb821">&#9670;&nbsp;</a></span>editor_get_window_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -802,15 +787,15 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int editor_get_window_size </td>
+          <td class="memname">static int32_t editor_get_window_size </td>
           <td>(</td>
-          <td class="paramtype">int *&#160;</td>
+          <td class="paramtype">uint32_t *&#160;</td>
           <td class="paramname"><em>rows</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *&#160;</td>
+          <td class="paramtype">uint32_t *&#160;</td>
           <td class="paramname"><em>columns</em>&#160;</td>
         </tr>
         <tr>
@@ -838,8 +823,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5aa94b93982350084b4b63a31e3a68b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aa94b93982350084b4b63a31e3a68b1">&#9670;&nbsp;</a></span>editor_initialize()</h2>
+<a id="a9f3588d65437046bb0a1545d9f68c1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f3588d65437046bb0a1545d9f68c1f1">&#9670;&nbsp;</a></span>editor_initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -847,16 +832,19 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void editor_initialize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structconfiguration__reader__result__t.html">configuration_reader_result_t</a> *&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes the editor. </p>
+
 </div>
 </div>
-<a id="aac0275529819324bf4cf772d209de1d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac0275529819324bf4cf772d209de1d1">&#9670;&nbsp;</a></span>editor_insert_character()</h2>
+<a id="a0dcc69bb821cddd94557a10961e7c8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dcc69bb821cddd94557a10961e7c8aa">&#9670;&nbsp;</a></span>editor_insert_character()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -867,7 +855,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static void editor_insert_character </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>c</em></td><td>)</td>
           <td></td>
         </tr>
@@ -916,8 +904,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a42a02ea2114c06044833bd6c5fd318af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42a02ea2114c06044833bd6c5fd318af">&#9670;&nbsp;</a></span>editor_insert_row()</h2>
+<a id="a1805f96f0edcad60409b7a7c865c1610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1805f96f0edcad60409b7a7c865c1610">&#9670;&nbsp;</a></span>editor_insert_row()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -928,7 +916,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static void editor_insert_row </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>at</em>, </td>
         </tr>
         <tr>
@@ -968,8 +956,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2482eaded555245487b4415bcd3d7076"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2482eaded555245487b4415bcd3d7076">&#9670;&nbsp;</a></span>editor_is_separator()</h2>
+<a id="a37e2d54fcf702fc595780437df9d3d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37e2d54fcf702fc595780437df9d3d4e">&#9670;&nbsp;</a></span>editor_is_separator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -978,9 +966,9 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int editor_is_separator </td>
+          <td class="memname">static bool editor_is_separator </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>c</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1004,8 +992,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae66a0295bd367ca3e9ee248c59860582"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66a0295bd367ca3e9ee248c59860582">&#9670;&nbsp;</a></span>editor_move_cursor()</h2>
+<a id="aabb07892f43e846b5254fd89682d40e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb07892f43e846b5254fd89682d40e7">&#9670;&nbsp;</a></span>editor_move_cursor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1016,7 +1004,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static void editor_move_cursor </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1053,10 +1041,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Opens a file and renders the content of the file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filePath</td><td><br  />
- </td></tr>
+    <tr><td class="paramname">filePath</td><td>The path of the file that is opened, read and rendered </td></tr>
   </table>
   </dd>
 </dl>
@@ -1090,8 +1079,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a237f4e3ff97b3ed21d86222f9034b5a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a237f4e3ff97b3ed21d86222f9034b5a2">&#9670;&nbsp;</a></span>editor_open_file_callback()</h2>
+<a id="a5d53fbc7795a0bed73b26d3862bc9b85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d53fbc7795a0bed73b26d3862bc9b85">&#9670;&nbsp;</a></span>editor_open_file_callback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1108,7 +1097,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>key</em>&#160;</td>
         </tr>
         <tr>
@@ -1153,7 +1142,7 @@ Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1177,10 +1166,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Processes a single keypress. </p>
+
 </div>
 </div>
-<a id="a1b2429b391b14f3946f51a2e2027bf97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b2429b391b14f3946f51a2e2027bf97">&#9670;&nbsp;</a></span>editor_prompt()</h2>
+<a id="ab6482a5997b3d325c2bf19d92c12c02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6482a5997b3d325c2bf19d92c12c02a">&#9670;&nbsp;</a></span>editor_prompt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1197,7 +1188,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(char *, int)&#160;</td>
+          <td class="paramtype">void(*)(char *, uint32_t)&#160;</td>
           <td class="paramname"><em>callback</em>&#160;</td>
         </tr>
         <tr>
@@ -1252,8 +1243,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a818f9c4b6c309358068922c8163b6107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a818f9c4b6c309358068922c8163b6107">&#9670;&nbsp;</a></span>editor_read_key()</h2>
+<a id="a0af7ececcb9c03a6585d53a211776d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af7ececcb9c03a6585d53a211776d0e">&#9670;&nbsp;</a></span>editor_read_key()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1262,7 +1253,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int editor_read_key </td>
+          <td class="memname">static uint32_t editor_read_key </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1295,10 +1286,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Refreshes the content that is rendered by the editor. </p>
+
 </div>
 </div>
-<a id="a6656d456a16730f6971073af01750afc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6656d456a16730f6971073af01750afc">&#9670;&nbsp;</a></span>editor_render_welcome_screen_row()</h2>
+<a id="a23a987e0a29e15892160231531ee39db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a987e0a29e15892160231531ee39db">&#9670;&nbsp;</a></span>editor_render_welcome_screen_row()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1315,7 +1308,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>rowIndex</em>&#160;</td>
         </tr>
         <tr>
@@ -1395,8 +1388,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a584ac397995195788214b41face90798"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a584ac397995195788214b41face90798">&#9670;&nbsp;</a></span>editor_row_cx_to_rx()</h2>
+<a id="a58ea753b7a9bae923c7e458d2bc41418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ea753b7a9bae923c7e458d2bc41418">&#9670;&nbsp;</a></span>editor_row_cx_to_rx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1405,7 +1398,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int editor_row_cx_to_rx </td>
+          <td class="memname">static uint32_t editor_row_cx_to_rx </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structeditor__row__t.html">editor_row_t</a> *&#160;</td>
           <td class="paramname"><em>row</em>, </td>
@@ -1413,8 +1406,8 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currentX</em>&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>cursorCurrentX</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1433,7 +1426,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">row</td><td>The editor row of the coordinate systems of booth coordinates </td></tr>
-    <tr><td class="paramname">currentX</td><td>The current horizontal coordinate from the underlying character pointer </td></tr>
+    <tr><td class="paramname">cursorCurrentX</td><td>The current horizontal coordinate from the underlying character pointer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1441,8 +1434,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a88ec9be7bde86381703cb6286f3ffaeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88ec9be7bde86381703cb6286f3ffaeb">&#9670;&nbsp;</a></span>editor_row_delete_character()</h2>
+<a id="ad68d1b4bac6430289b98675afc574fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68d1b4bac6430289b98675afc574fd8">&#9670;&nbsp;</a></span>editor_row_delete_character()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1459,7 +1452,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>at</em>&#160;</td>
         </tr>
         <tr>
@@ -1486,8 +1479,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a14518878ce2491fdc3ad729f6ad3f08d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14518878ce2491fdc3ad729f6ad3f08d">&#9670;&nbsp;</a></span>editor_row_insert_character()</h2>
+<a id="a2cb35e66b78c3b4b16c16bde144dd194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb35e66b78c3b4b16c16bde144dd194">&#9670;&nbsp;</a></span>editor_row_insert_character()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1504,13 +1497,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>at</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>c</em>&#160;</td>
         </tr>
         <tr>
@@ -1538,8 +1531,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c20d548bb021ddaa34a0e9eae7eab92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c20d548bb021ddaa34a0e9eae7eab92">&#9670;&nbsp;</a></span>editor_row_rx_to_cx()</h2>
+<a id="a9c0ef8c0e864fb552a2b1dc6ba80390f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0ef8c0e864fb552a2b1dc6ba80390f">&#9670;&nbsp;</a></span>editor_row_rx_to_cx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1548,7 +1541,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int editor_row_rx_to_cx </td>
+          <td class="memname">static uint32_t editor_row_rx_to_cx </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structeditor__row__t.html">editor_row_t</a> *&#160;</td>
           <td class="paramname"><em>row</em>, </td>
@@ -1556,7 +1549,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>renderX</em>&#160;</td>
         </tr>
         <tr>
@@ -1584,8 +1577,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a469504d2100ee4639ea8b939fa473f14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a469504d2100ee4639ea8b939fa473f14">&#9670;&nbsp;</a></span>editor_rows_to_string()</h2>
+<a id="a87811541f32b4fbec28abe20d472d068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87811541f32b4fbec28abe20d472d068">&#9670;&nbsp;</a></span>editor_rows_to_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1596,7 +1589,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static char * editor_rows_to_string </td>
           <td>(</td>
-          <td class="paramtype">int *&#160;</td>
+          <td class="paramtype">uint32_t *&#160;</td>
           <td class="paramname"><em>bufferLength</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1745,20 +1738,30 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a82b504d26d915c62f6c452b9519f04e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82b504d26d915c62f6c452b9519f04e4">&#9670;&nbsp;</a></span>editor_show_help()</h2>
+<a id="aaa9b0b9e4b0a86c7d6b15d653cf94aa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa9b0b9e4b0a86c7d6b15d653cf94aa6">&#9670;&nbsp;</a></span>editor_show_help()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void editor_show_help </td>
+          <td class="memname">static void editor_show_help </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Shows the hotkeys of the editor as a status message. </p>
 
 </div>
 </div>
@@ -1785,10 +1788,11 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Updates the contents that are diplayed by a single editor row. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">row</td><td><br  />
- </td></tr>
+    <tr><td class="paramname">row</td><td>The row that is updated </td></tr>
   </table>
   </dd>
 </dl>
@@ -1819,7 +1823,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Updatees the syntax highlighting for a given editor row. </p>
+<p>Updates the syntax highlighting for a given editor row. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">row</td><td>The editor row where the syntax highlighting is applied </td></tr>
@@ -1869,6 +1873,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Global state of the editor. </p>
+
 </div>
 </div>
 <a id="ac202057a8bed4e3c46bd968ad096a491"></a>
@@ -1882,6 +1888,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Used to store the state of the terminal when Yate was invoked, so we can revert it to it's original state. </p>
 
 </div>
 </div>

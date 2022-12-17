@@ -1,4 +1,4 @@
 # Ignore build folder
 [Bb][Uu][Ii][Ll][Dd]/
 # Ignore vscode folder
-[Vv][Ss][Cc][Oo][Dd][Ee]/
+.[Vv][Ss][Cc][Oo][Dd][Ee]/

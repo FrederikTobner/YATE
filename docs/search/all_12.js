@@ -1,4 +1,16 @@
 var searchData=
 [
-  ['tab_5fstop_139',['TAB_STOP',['../editor_8c.html#acc269b479b18fbda6ce99bd682d2280e',1,'editor.c']]]
+  ['screencolumns_144',['screenColumns',['../structeditor__config__t.html#aaedd6ddb2270de92be79fda8ac7d57c0',1,'editor_config_t']]],
+  ['screenrows_145',['screenRows',['../structeditor__config__t.html#a4c1f9f383f60bbca8c8856ab5141c663',1,'editor_config_t']]],
+  ['singleline_5fcomment_5fstart_146',['singleline_comment_start',['../structeditor__syntax__t.html#a63b7c2ca4466096999a05571806d07f7',1,'editor_syntax_t']]],
+  ['size_147',['size',['../structeditor__row__t.html#a81ad1df416ca42a01be8b656d0f86b83',1,'editor_row_t']]],
+  ['statusmessage_148',['statusMessage',['../structeditor__config__t.html#a9d836e78a989cc33b8dfb2c27f9602e0',1,'editor_config_t']]],
+  ['statusmessagetimestamp_149',['statusMessageTimeStamp',['../structeditor__config__t.html#a2f7e8d1a655f9aff1880425cc887c126',1,'editor_config_t']]],
+  ['syntax_150',['syntax',['../structeditor__config__t.html#aa3441bd52ae17847e17f75332efba614',1,'editor_config_t']]],
+  ['syntax_2ec_151',['syntax.c',['../syntax_8c.html',1,'']]],
+  ['syntax_2eh_152',['syntax.h',['../syntax_8h.html',1,'']]],
+  ['syntax_5fconvert_5fto_5fcolor_153',['syntax_convert_to_color',['../syntax_8c.html#afa0951954ee6b1e5f0a4bc0a0569fd80',1,'syntax_convert_to_color(int highlightGroup):&#160;syntax.c'],['../syntax_8h.html#afa0951954ee6b1e5f0a4bc0a0569fd80',1,'syntax_convert_to_color(int highlightGroup):&#160;syntax.c']]],
+  ['syntax_5fget_5flanguage_5fcount_154',['syntax_get_language_count',['../syntax_8c.html#a63164cf9e8f6af3d68e8aadaf5d64f2e',1,'syntax_get_language_count():&#160;syntax.c'],['../syntax_8h.html#a63164cf9e8f6af3d68e8aadaf5d64f2e',1,'syntax_get_language_count():&#160;syntax.c']]],
+  ['syntax_5fhighlight_5fnumbers_155',['SYNTAX_HIGHLIGHT_NUMBERS',['../syntax_8h.html#a1eb9acfb72ba50e03c0a87bc1e7dcfb0',1,'syntax.h']]],
+  ['syntax_5fhighlight_5fstrings_156',['SYNTAX_HIGHLIGHT_STRINGS',['../syntax_8h.html#ae71a1480aaba7bc26cfb37869f569d4e',1,'syntax.h']]]
 ];

@@ -53,6 +53,7 @@
         NULL, 0   \
     }
 
+/// Models a single line that is rendered by the editor
 typedef struct
 {
     /// Index of the editor row 
@@ -71,6 +72,7 @@ typedef struct
     bool hightLightOpenComment;
 } editor_row_t;
 
+/// Models the current state of the editor
 typedef struct 
 {
     /// X-coordinate of the curser in the underlying character buffer
@@ -111,17 +113,28 @@ typedef struct
     configuration_reader_result_t * config;
 } editor_config_t;
 
+/// Special control characters
 enum editorKey
 {
+    /// The backspace key
     BACKSPACE = 127,
+    /// Left arrow key
     ARROW_LEFT = 1000,
+    /// Right arrow key
     ARROW_RIGHT,
+    /// Up arrow key
     ARROW_UP,
+    /// Down arrow key
     ARROW_DOWN,
+    /// Delete key
     DEL_KEY,
+    /// End key (jumps to the end of the line)
     END_KEY,
+    /// Home key (jumps to the beginning of the line)
     HOME_KEY,
+    /// Page up key - used for scrolling up
     PAGE_UP,
+    /// Page up key - used for scrolling down
     PAGE_DOWN,
 };
 
@@ -165,6 +178,7 @@ static void editor_save();
 static void editor_scroll();
 static void editor_select_syntax_highlight();
 static void editor_set_status_message(char const *, ...);
+static inline void editor_show_help();
 static void editor_update_row(editor_row_t *);
 static void editor_update_syntax(editor_row_t *);
 static inline void editor_yank_line();
@@ -372,11 +386,6 @@ void editor_refresh_screen()
     append_buffer_append_string(&buffer, "\x1b[?25h", 6);
     write(STDOUT_FILENO, buffer.buffer, buffer.length);
     append_buffer_free(&buffer);
-}
-
-void editor_show_help()
-{
-    editor_set_status_message("HELP: Ctrl-D = delete | Ctrl-F = find | Ctrl-H = help | Ctrl-O = open | Ctrl-P = paste | Ctrl-Q = quit | Ctrl-S = save | Ctrl-Y = yank");
 }
 
 /// @brief Emits an error message and quits the editor
@@ -1277,6 +1286,12 @@ static void editor_set_status_message(char const * format, ...)
     vsnprintf(editorConfig.statusMessage, sizeof(editorConfig.statusMessage), format, argumentPointer);
     va_end(argumentPointer);
     editorConfig.statusMessageTimeStamp = time(NULL);
+}
+
+/// Shows the hotkeys of the editor as a status message
+static inline void editor_show_help()
+{
+    editor_set_status_message("HELP: Ctrl-D = delete | Ctrl-F = find | Ctrl-H = help | Ctrl-O = open | Ctrl-P = paste | Ctrl-Q = quit | Ctrl-S = save | Ctrl-Y = yank");
 }
 
 /// @brief Updates the contents that are diplayed by a single editor row

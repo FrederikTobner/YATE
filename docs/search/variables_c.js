@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quittimes_236',['quitTimes',['../structeditor__config__t.html#a49fc2475bedc140794710f1dcd954261',1,'editor_config_t']]]
+  ['pythonfileextensions_269',['PythonFileExtensions',['../syntax_8c.html#a7d497c2d0e5cf9a065ddbfc246c06f76',1,'syntax.c']]],
+  ['pythonkeywords_270',['PythonKeywords',['../syntax_8c.html#a601fb81ad0d3c99b2126f404246995c5',1,'syntax.c']]]
 ];

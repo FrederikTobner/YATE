@@ -73,45 +73,33 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>File containing the declarations of the editor functionality.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="config__reader_8h_source.html">config_reader.h</a>&quot;</code><br />
+</div>
 <p><a href="editor_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab3ebf2c1536e118dbc5afa77ac39e549"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8h.html#ab3ebf2c1536e118dbc5afa77ac39e549">editor_create_file</a> (char const *filePath)</td></tr>
-<tr class="separator:ab3ebf2c1536e118dbc5afa77ac39e549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aac86d95ccb32ef52240c52d1cb0ed6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8h.html#a0aac86d95ccb32ef52240c52d1cb0ed6">editor_enable_raw_mode</a> ()</td></tr>
-<tr class="memdesc:a0aac86d95ccb32ef52240c52d1cb0ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables raw mode.  <a href="editor_8h.html#a0aac86d95ccb32ef52240c52d1cb0ed6">More...</a><br /></td></tr>
+<tr class="memdesc:a0aac86d95ccb32ef52240c52d1cb0ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables raw mode for the current terminal session instead of canonical mode.  <a href="editor_8h.html#a0aac86d95ccb32ef52240c52d1cb0ed6">More...</a><br /></td></tr>
 <tr class="separator:a0aac86d95ccb32ef52240c52d1cb0ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa94b93982350084b4b63a31e3a68b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8h.html#a5aa94b93982350084b4b63a31e3a68b1">editor_initialize</a> ()</td></tr>
-<tr class="separator:a5aa94b93982350084b4b63a31e3a68b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f3588d65437046bb0a1545d9f68c1f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8h.html#a9f3588d65437046bb0a1545d9f68c1f1">editor_initialize</a> (<a class="el" href="structconfiguration__reader__result__t.html">configuration_reader_result_t</a> *config)</td></tr>
+<tr class="memdesc:a9f3588d65437046bb0a1545d9f68c1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the editor.  <a href="editor_8h.html#a9f3588d65437046bb0a1545d9f68c1f1">More...</a><br /></td></tr>
+<tr class="separator:a9f3588d65437046bb0a1545d9f68c1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27704e3280b55b32ff7c4192850aa472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8h.html#a27704e3280b55b32ff7c4192850aa472">editor_open</a> (char const *filePath)</td></tr>
+<tr class="memdesc:a27704e3280b55b32ff7c4192850aa472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a file and renders the content of the file.  <a href="editor_8h.html#a27704e3280b55b32ff7c4192850aa472">More...</a><br /></td></tr>
 <tr class="separator:a27704e3280b55b32ff7c4192850aa472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8h.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">editor_process_keypress</a> ()</td></tr>
+<tr class="memdesc:a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes a single keypress.  <a href="editor_8h.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">More...</a><br /></td></tr>
 <tr class="separator:a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e241125e49d43bfb08d9509915dd406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8h.html#a5e241125e49d43bfb08d9509915dd406">editor_refresh_screen</a> ()</td></tr>
+<tr class="memdesc:a5e241125e49d43bfb08d9509915dd406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refreshes the content that is rendered by the editor.  <a href="editor_8h.html#a5e241125e49d43bfb08d9509915dd406">More...</a><br /></td></tr>
 <tr class="separator:a5e241125e49d43bfb08d9509915dd406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82b504d26d915c62f6c452b9519f04e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8h.html#a82b504d26d915c62f6c452b9519f04e4">editor_show_help</a> ()</td></tr>
-<tr class="separator:a82b504d26d915c62f6c452b9519f04e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ab3ebf2c1536e118dbc5afa77ac39e549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3ebf2c1536e118dbc5afa77ac39e549">&#9670;&nbsp;</a></span>editor_create_file()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int editor_create_file </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>filePath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>File containing the declarations of the editor functionality. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a0aac86d95ccb32ef52240c52d1cb0ed6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0aac86d95ccb32ef52240c52d1cb0ed6">&#9670;&nbsp;</a></span>editor_enable_raw_mode()</h2>
 
@@ -127,13 +115,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enables raw mode. </p>
+<p>Enables raw mode for the current terminal session instead of canonical mode. </p>
+<p>Enables raw mode for the current terminal session instead of canonical mode.</p>
 <p>By default the terminal starts in canonical mode. Iput is only sent when the user presses enter </p>
 
 </div>
 </div>
-<a id="a5aa94b93982350084b4b63a31e3a68b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aa94b93982350084b4b63a31e3a68b1">&#9670;&nbsp;</a></span>editor_initialize()</h2>
+<a id="a9f3588d65437046bb0a1545d9f68c1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f3588d65437046bb0a1545d9f68c1f1">&#9670;&nbsp;</a></span>editor_initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,11 +130,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void editor_initialize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structconfiguration__reader__result__t.html">configuration_reader_result_t</a> *&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes the editor. </p>
 
 </div>
 </div>
@@ -164,10 +156,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Opens a file and renders the content of the file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filePath</td><td><br  />
- </td></tr>
+    <tr><td class="paramname">filePath</td><td>The path of the file that is opened, read and rendered </td></tr>
   </table>
   </dd>
 </dl>
@@ -189,6 +182,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Processes a single keypress. </p>
+
 </div>
 </div>
 <a id="a5e241125e49d43bfb08d9509915dd406"></a>
@@ -206,22 +201,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a82b504d26d915c62f6c452b9519f04e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82b504d26d915c62f6c452b9519f04e4">&#9670;&nbsp;</a></span>editor_show_help()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void editor_show_help </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Refreshes the content that is rendered by the editor. </p>
 
 </div>
 </div>

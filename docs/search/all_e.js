@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['page_5fdown_119',['PAGE_DOWN',['../editor_8c.html#afc98e1836253d54640dce00e325aa284a714c5d27586a8bcbab274d9176da1539',1,'editor.c']]],
-  ['page_5fup_120',['PAGE_UP',['../editor_8c.html#afc98e1836253d54640dce00e325aa284a0442824c041b9618cd7c512205e7e6dc',1,'editor.c']]]
+  ['originaltermios_130',['originalTermios',['../structeditor__config__t.html#a1edce23e64fce42316a188d3d417bca6',1,'editor_config_t::originalTermios()'],['../editor_8c.html#ac202057a8bed4e3c46bd968ad096a491',1,'originalTermios():&#160;editor.c']]]
 ];

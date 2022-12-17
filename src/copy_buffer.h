@@ -26,7 +26,9 @@
 /// Copy buffer
 typedef struct 
 {
+    /// The underlying character buffer
     char * buffer;
+    /// The length of the character buffer
     size_t length;
 } copy_buffer_t;
 
@@ -34,7 +36,8 @@ typedef struct
 /// @param buffer the copy buffer that is freed
 void copy_buffer_free(copy_buffer_t * buffer);
 
-//
+/// @brief Initializes a copy buffer
+/// @param buffer The copy buffer that is initialized
 void copy_buffer_init(copy_buffer_t * buffer);
 
 /// @brief Writes a string to an copy buffer

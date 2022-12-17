@@ -76,8 +76,13 @@ $(function() {
 
 <p>File containing main entry point of the editor.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;unistd.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="config__reader_8h_source.html">config_reader.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="editor_8h_source.html">editor.h</a>&quot;</code><br />
+<code>#include &quot;project_config.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -90,6 +95,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a7649795164d8a2e54588727493d7f646"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7649795164d8a2e54588727493d7f646">printConsoleHelp</a> ()</td></tr>
+<tr class="separator:a7649795164d8a2e54588727493d7f646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f1c350d7f153727a622b359581749b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a05f1c350d7f153727a622b359581749b">printHotKeys</a> ()</td></tr>
+<tr class="separator:a05f1c350d7f153727a622b359581749b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee9de93fb017bf9e7a56537023ad92b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aaee9de93fb017bf9e7a56537023ad92b">printSettings</a> ()</td></tr>
+<tr class="separator:aaee9de93fb017bf9e7a56537023ad92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a790aa8b99fa3d90918361b8936af0b14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a790aa8b99fa3d90918361b8936af0b14">main</a> (int argc, char const **argv)</td></tr>
 <tr class="memdesc:a790aa8b99fa3d90918361b8936af0b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main entry point of the editor.  <a href="main_8c.html#a790aa8b99fa3d90918361b8936af0b14">More...</a><br /></td></tr>
 <tr class="separator:a790aa8b99fa3d90918361b8936af0b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +186,81 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 (Unreachable) </dd></dl>
+
+</div>
+</div>
+<a id="a7649795164d8a2e54588727493d7f646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7649795164d8a2e54588727493d7f646">&#9670;&nbsp;</a></span>printConsoleHelp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void printConsoleHelp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05f1c350d7f153727a622b359581749b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f1c350d7f153727a622b359581749b">&#9670;&nbsp;</a></span>printHotKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void printHotKeys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaee9de93fb017bf9e7a56537023ad92b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaee9de93fb017bf9e7a56537023ad92b">&#9670;&nbsp;</a></span>printSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void printSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

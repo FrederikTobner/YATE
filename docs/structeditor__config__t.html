@@ -68,56 +68,99 @@ $(function() {
 <div class="title">editor_config_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Models the current state of the editor.  
+ <a href="structeditor__config__t.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:adf3cc467208be4789c2f81b86dc7490f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#adf3cc467208be4789c2f81b86dc7490f">currentX</a></td></tr>
-<tr class="separator:adf3cc467208be4789c2f81b86dc7490f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88375d40ddcbabeb2b7d747a7e548efd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a88375d40ddcbabeb2b7d747a7e548efd">currentY</a></td></tr>
-<tr class="separator:a88375d40ddcbabeb2b7d747a7e548efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2192b8ed34f75a409805944bfcb8919d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a2192b8ed34f75a409805944bfcb8919d">renderX</a></td></tr>
-<tr class="separator:a2192b8ed34f75a409805944bfcb8919d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3549e5c2dd299fc503feeb22c25e0cd3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a3549e5c2dd299fc503feeb22c25e0cd3">rowOffset</a></td></tr>
-<tr class="separator:a3549e5c2dd299fc503feeb22c25e0cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36fc6c36841b02e896652eff0303c4d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a36fc6c36841b02e896652eff0303c4d2">columnOffset</a></td></tr>
-<tr class="separator:a36fc6c36841b02e896652eff0303c4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62c8b537dd3a5388ccfeb7bcc62a1587"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a62c8b537dd3a5388ccfeb7bcc62a1587">screenRows</a></td></tr>
-<tr class="separator:a62c8b537dd3a5388ccfeb7bcc62a1587"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc2efd356aaece15473cd0f7e5e211b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a6cc2efd356aaece15473cd0f7e5e211b">screenColumns</a></td></tr>
-<tr class="separator:a6cc2efd356aaece15473cd0f7e5e211b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea25b3035602ffebd61d4886246e2dbe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#aea25b3035602ffebd61d4886246e2dbe">numberOfRows</a></td></tr>
-<tr class="separator:aea25b3035602ffebd61d4886246e2dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a128579a4c135a3a8ade44284e6933116"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeditor__row__t.html">editor_row_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a128579a4c135a3a8ade44284e6933116">row</a></td></tr>
-<tr class="separator:a128579a4c135a3a8ade44284e6933116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3596b9df4bf9c2de39bd39585c762bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#ad3596b9df4bf9c2de39bd39585c762bc">dirty</a></td></tr>
-<tr class="separator:ad3596b9df4bf9c2de39bd39585c762bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ded5ca3a5d5c5ac321af249486c3f6e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a5ded5ca3a5d5c5ac321af249486c3f6e">cursorCurrentX</a></td></tr>
+<tr class="memdesc:a5ded5ca3a5d5c5ac321af249486c3f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">X-coordinate of the curser in the underlying character buffer.  <a href="structeditor__config__t.html#a5ded5ca3a5d5c5ac321af249486c3f6e">More...</a><br /></td></tr>
+<tr class="separator:a5ded5ca3a5d5c5ac321af249486c3f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d9367637889b1edfde68283839465f9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a5d9367637889b1edfde68283839465f9">cursorCurrentY</a></td></tr>
+<tr class="memdesc:a5d9367637889b1edfde68283839465f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y-coordinate of the curser in the underlying character buffer.  <a href="structeditor__config__t.html#a5d9367637889b1edfde68283839465f9">More...</a><br /></td></tr>
+<tr class="separator:a5d9367637889b1edfde68283839465f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d20be414dce6376bf5277cb9c1e0e6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#ae9d20be414dce6376bf5277cb9c1e0e6">renderX</a></td></tr>
+<tr class="memdesc:ae9d20be414dce6376bf5277cb9c1e0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">X-coordinate in the render buffer.  <a href="structeditor__config__t.html#ae9d20be414dce6376bf5277cb9c1e0e6">More...</a><br /></td></tr>
+<tr class="separator:ae9d20be414dce6376bf5277cb9c1e0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95abe5a7d95158f31bacb2d7a811da14"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a95abe5a7d95158f31bacb2d7a811da14">rowOffset</a></td></tr>
+<tr class="memdesc:a95abe5a7d95158f31bacb2d7a811da14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Row offset - used for vertical scrolling.  <a href="structeditor__config__t.html#a95abe5a7d95158f31bacb2d7a811da14">More...</a><br /></td></tr>
+<tr class="separator:a95abe5a7d95158f31bacb2d7a811da14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaabd6a656e35939abac52b177c5ed68"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#abaabd6a656e35939abac52b177c5ed68">columnOffset</a></td></tr>
+<tr class="memdesc:abaabd6a656e35939abac52b177c5ed68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Column offset - used for horizontal scrolling.  <a href="structeditor__config__t.html#abaabd6a656e35939abac52b177c5ed68">More...</a><br /></td></tr>
+<tr class="separator:abaabd6a656e35939abac52b177c5ed68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1f9f383f60bbca8c8856ab5141c663"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a4c1f9f383f60bbca8c8856ab5141c663">screenRows</a></td></tr>
+<tr class="memdesc:a4c1f9f383f60bbca8c8856ab5141c663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of rows that are rendered on the screen.  <a href="structeditor__config__t.html#a4c1f9f383f60bbca8c8856ab5141c663">More...</a><br /></td></tr>
+<tr class="separator:a4c1f9f383f60bbca8c8856ab5141c663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedd6ddb2270de92be79fda8ac7d57c0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#aaedd6ddb2270de92be79fda8ac7d57c0">screenColumns</a></td></tr>
+<tr class="memdesc:aaedd6ddb2270de92be79fda8ac7d57c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of columns that is rendered on the screen.  <a href="structeditor__config__t.html#aaedd6ddb2270de92be79fda8ac7d57c0">More...</a><br /></td></tr>
+<tr class="separator:aaedd6ddb2270de92be79fda8ac7d57c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1218555e8d1f6907461657f6fca9c82f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a1218555e8d1f6907461657f6fca9c82f">numberOfRows</a></td></tr>
+<tr class="memdesc:a1218555e8d1f6907461657f6fca9c82f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of rows for the oppened buffer.  <a href="structeditor__config__t.html#a1218555e8d1f6907461657f6fca9c82f">More...</a><br /></td></tr>
+<tr class="separator:a1218555e8d1f6907461657f6fca9c82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7898fccf06c939d62db73ffabbe8eb33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeditor__row__t.html">editor_row_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a7898fccf06c939d62db73ffabbe8eb33">editorRows</a></td></tr>
+<tr class="memdesc:a7898fccf06c939d62db73ffabbe8eb33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the rows of opened the buffer.  <a href="structeditor__config__t.html#a7898fccf06c939d62db73ffabbe8eb33">More...</a><br /></td></tr>
+<tr class="separator:a7898fccf06c939d62db73ffabbe8eb33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7bbde7e3f987652ea72d2a6c931880"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a3b7bbde7e3f987652ea72d2a6c931880">unsavedChanges</a></td></tr>
+<tr class="memdesc:a3b7bbde7e3f987652ea72d2a6c931880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to track unsafed modifications.  <a href="structeditor__config__t.html#a3b7bbde7e3f987652ea72d2a6c931880">More...</a><br /></td></tr>
+<tr class="separator:a3b7bbde7e3f987652ea72d2a6c931880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8928396053f8d7c1a6110f447b858965"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a8928396053f8d7c1a6110f447b858965">fileName</a></td></tr>
+<tr class="memdesc:a8928396053f8d7c1a6110f447b858965"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the file, that is currently opened.  <a href="structeditor__config__t.html#a8928396053f8d7c1a6110f447b858965">More...</a><br /></td></tr>
 <tr class="separator:a8928396053f8d7c1a6110f447b858965"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d836e78a989cc33b8dfb2c27f9602e0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a9d836e78a989cc33b8dfb2c27f9602e0">statusMessage</a> [240]</td></tr>
+<tr class="memdesc:a9d836e78a989cc33b8dfb2c27f9602e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status message that is diplayed under status bar.  <a href="structeditor__config__t.html#a9d836e78a989cc33b8dfb2c27f9602e0">More...</a><br /></td></tr>
 <tr class="separator:a9d836e78a989cc33b8dfb2c27f9602e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f7e8d1a655f9aff1880425cc887c126"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a2f7e8d1a655f9aff1880425cc887c126">statusMessageTimeStamp</a></td></tr>
+<tr class="memdesc:a2f7e8d1a655f9aff1880425cc887c126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp of the last message.  <a href="structeditor__config__t.html#a2f7e8d1a655f9aff1880425cc887c126">More...</a><br /></td></tr>
 <tr class="separator:a2f7e8d1a655f9aff1880425cc887c126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3441bd52ae17847e17f75332efba614"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeditor__syntax__t.html">editor_syntax_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#aa3441bd52ae17847e17f75332efba614">syntax</a></td></tr>
+<tr class="memdesc:aa3441bd52ae17847e17f75332efba614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the syntax configurations of the editor.  <a href="structeditor__config__t.html#aa3441bd52ae17847e17f75332efba614">More...</a><br /></td></tr>
 <tr class="separator:aa3441bd52ae17847e17f75332efba614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1edce23e64fce42316a188d3d417bca6"><td class="memItemLeft" align="right" valign="top">struct termios&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a1edce23e64fce42316a188d3d417bca6">originalTermios</a></td></tr>
+<tr class="memdesc:a1edce23e64fce42316a188d3d417bca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to store the original state of the terminal.  <a href="structeditor__config__t.html#a1edce23e64fce42316a188d3d417bca6">More...</a><br /></td></tr>
 <tr class="separator:a1edce23e64fce42316a188d3d417bca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a869ec5fb90b2668fa260749a43372917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcopy__buffer__t.html">copy_buffer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a869ec5fb90b2668fa260749a43372917">copyBuffer</a></td></tr>
+<tr class="memdesc:a869ec5fb90b2668fa260749a43372917"><td class="mdescLeft">&#160;</td><td class="mdescRight">The copy buffer of the editor - used to store yanked characters.  <a href="structeditor__config__t.html#a869ec5fb90b2668fa260749a43372917">More...</a><br /></td></tr>
 <tr class="separator:a869ec5fb90b2668fa260749a43372917"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49fc2475bedc140794710f1dcd954261"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a49fc2475bedc140794710f1dcd954261">quitTimes</a></td></tr>
-<tr class="separator:a49fc2475bedc140794710f1dcd954261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e61e1ef270c2ee7ff81fee92184169"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#ac8e61e1ef270c2ee7ff81fee92184169">quitTimes</a></td></tr>
+<tr class="memdesc:ac8e61e1ef270c2ee7ff81fee92184169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of times the editor must be quit by the user if there are some unsaved changes.  <a href="structeditor__config__t.html#ac8e61e1ef270c2ee7ff81fee92184169">More...</a><br /></td></tr>
+<tr class="separator:ac8e61e1ef270c2ee7ff81fee92184169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77877c791526dd6e4eb8b1668407dbf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structconfiguration__reader__result__t.html">configuration_reader_result_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditor__config__t.html#a77877c791526dd6e4eb8b1668407dbf2">config</a></td></tr>
+<tr class="memdesc:a77877c791526dd6e4eb8b1668407dbf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration that was read by the configuration reader.  <a href="structeditor__config__t.html#a77877c791526dd6e4eb8b1668407dbf2">More...</a><br /></td></tr>
+<tr class="separator:a77877c791526dd6e4eb8b1668407dbf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
-<a id="a36fc6c36841b02e896652eff0303c4d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36fc6c36841b02e896652eff0303c4d2">&#9670;&nbsp;</a></span>columnOffset</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Models the current state of the editor. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="abaabd6a656e35939abac52b177c5ed68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaabd6a656e35939abac52b177c5ed68">&#9670;&nbsp;</a></span>columnOffset</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_config_t::columnOffset</td>
+          <td class="memname">uint32_t editor_config_t::columnOffset</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Column offset - used for horizontal scrolling. </p>
+
+</div>
+</div>
+<a id="a77877c791526dd6e4eb8b1668407dbf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77877c791526dd6e4eb8b1668407dbf2">&#9670;&nbsp;</a></span>config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structconfiguration__reader__result__t.html">configuration_reader_result_t</a>* editor_config_t::config</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration that was read by the configuration reader. </p>
 
 </div>
 </div>
@@ -133,47 +176,55 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The copy buffer of the editor - used to store yanked characters. </p>
+
 </div>
 </div>
-<a id="adf3cc467208be4789c2f81b86dc7490f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf3cc467208be4789c2f81b86dc7490f">&#9670;&nbsp;</a></span>currentX</h2>
+<a id="a5ded5ca3a5d5c5ac321af249486c3f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ded5ca3a5d5c5ac321af249486c3f6e">&#9670;&nbsp;</a></span>cursorCurrentX</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_config_t::currentX</td>
+          <td class="memname">uint32_t editor_config_t::cursorCurrentX</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>X-coordinate of the curser in the underlying character buffer. </p>
+
 </div>
 </div>
-<a id="a88375d40ddcbabeb2b7d747a7e548efd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88375d40ddcbabeb2b7d747a7e548efd">&#9670;&nbsp;</a></span>currentY</h2>
+<a id="a5d9367637889b1edfde68283839465f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d9367637889b1edfde68283839465f9">&#9670;&nbsp;</a></span>cursorCurrentY</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_config_t::currentY</td>
+          <td class="memname">uint32_t editor_config_t::cursorCurrentY</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Y-coordinate of the curser in the underlying character buffer. </p>
+
 </div>
 </div>
-<a id="ad3596b9df4bf9c2de39bd39585c762bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3596b9df4bf9c2de39bd39585c762bc">&#9670;&nbsp;</a></span>dirty</h2>
+<a id="a7898fccf06c939d62db73ffabbe8eb33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7898fccf06c939d62db73ffabbe8eb33">&#9670;&nbsp;</a></span>editorRows</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_config_t::dirty</td>
+          <td class="memname"><a class="el" href="structeditor__row__t.html">editor_row_t</a>* editor_config_t::editorRows</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pointer to the rows of opened the buffer. </p>
 
 </div>
 </div>
@@ -189,19 +240,23 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The name of the file, that is currently opened. </p>
+
 </div>
 </div>
-<a id="aea25b3035602ffebd61d4886246e2dbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea25b3035602ffebd61d4886246e2dbe">&#9670;&nbsp;</a></span>numberOfRows</h2>
+<a id="a1218555e8d1f6907461657f6fca9c82f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1218555e8d1f6907461657f6fca9c82f">&#9670;&nbsp;</a></span>numberOfRows</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_config_t::numberOfRows</td>
+          <td class="memname">uint32_t editor_config_t::numberOfRows</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Amount of rows for the oppened buffer. </p>
 
 </div>
 </div>
@@ -217,89 +272,87 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Used to store the original state of the terminal. </p>
+
 </div>
 </div>
-<a id="a49fc2475bedc140794710f1dcd954261"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49fc2475bedc140794710f1dcd954261">&#9670;&nbsp;</a></span>quitTimes</h2>
+<a id="ac8e61e1ef270c2ee7ff81fee92184169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e61e1ef270c2ee7ff81fee92184169">&#9670;&nbsp;</a></span>quitTimes</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_config_t::quitTimes</td>
+          <td class="memname">uint8_t editor_config_t::quitTimes</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Amount of times the editor must be quit by the user if there are some unsaved changes. </p>
+
 </div>
 </div>
-<a id="a2192b8ed34f75a409805944bfcb8919d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2192b8ed34f75a409805944bfcb8919d">&#9670;&nbsp;</a></span>renderX</h2>
+<a id="ae9d20be414dce6376bf5277cb9c1e0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d20be414dce6376bf5277cb9c1e0e6">&#9670;&nbsp;</a></span>renderX</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_config_t::renderX</td>
+          <td class="memname">uint32_t editor_config_t::renderX</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>X-coordinate in the render buffer. </p>
+
 </div>
 </div>
-<a id="a128579a4c135a3a8ade44284e6933116"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a128579a4c135a3a8ade44284e6933116">&#9670;&nbsp;</a></span>row</h2>
+<a id="a95abe5a7d95158f31bacb2d7a811da14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95abe5a7d95158f31bacb2d7a811da14">&#9670;&nbsp;</a></span>rowOffset</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structeditor__row__t.html">editor_row_t</a>* editor_config_t::row</td>
+          <td class="memname">uint32_t editor_config_t::rowOffset</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Row offset - used for vertical scrolling. </p>
+
 </div>
 </div>
-<a id="a3549e5c2dd299fc503feeb22c25e0cd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3549e5c2dd299fc503feeb22c25e0cd3">&#9670;&nbsp;</a></span>rowOffset</h2>
+<a id="aaedd6ddb2270de92be79fda8ac7d57c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaedd6ddb2270de92be79fda8ac7d57c0">&#9670;&nbsp;</a></span>screenColumns</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_config_t::rowOffset</td>
+          <td class="memname">uint32_t editor_config_t::screenColumns</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Amount of columns that is rendered on the screen. </p>
+
 </div>
 </div>
-<a id="a6cc2efd356aaece15473cd0f7e5e211b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cc2efd356aaece15473cd0f7e5e211b">&#9670;&nbsp;</a></span>screenColumns</h2>
+<a id="a4c1f9f383f60bbca8c8856ab5141c663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1f9f383f60bbca8c8856ab5141c663">&#9670;&nbsp;</a></span>screenRows</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int editor_config_t::screenColumns</td>
+          <td class="memname">uint32_t editor_config_t::screenRows</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a62c8b537dd3a5388ccfeb7bcc62a1587"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62c8b537dd3a5388ccfeb7bcc62a1587">&#9670;&nbsp;</a></span>screenRows</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int editor_config_t::screenRows</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Amount of rows that are rendered on the screen. </p>
 
 </div>
 </div>
@@ -315,6 +368,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The status message that is diplayed under status bar. </p>
+
 </div>
 </div>
 <a id="a2f7e8d1a655f9aff1880425cc887c126"></a>
@@ -329,6 +384,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Timestamp of the last message. </p>
+
 </div>
 </div>
 <a id="aa3441bd52ae17847e17f75332efba614"></a>
@@ -342,6 +399,24 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pointer to the syntax configurations of the editor. </p>
+
+</div>
+</div>
+<a id="a3b7bbde7e3f987652ea72d2a6c931880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7bbde7e3f987652ea72d2a6c931880">&#9670;&nbsp;</a></span>unsavedChanges</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool editor_config_t::unsavedChanges</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to track unsafed modifications. </p>
 
 </div>
 </div>

@@ -88,30 +88,27 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef YATE_EDITOR_H_</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define YATE_EDITOR_H_</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">int</span> <a class="code" href="editor_8h.html#ab3ebf2c1536e118dbc5afa77ac39e549">editor_create_file</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> * filePath);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a0aac86d95ccb32ef52240c52d1cb0ed6">editor_enable_raw_mode</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a5aa94b93982350084b4b63a31e3a68b1">editor_initialize</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a27704e3280b55b32ff7c4192850aa472">editor_open</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> * filePath);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">editor_process_keypress</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a5e241125e49d43bfb08d9509915dd406">editor_refresh_screen</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a82b504d26d915c62f6c452b9519f04e4">editor_show_help</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config__reader_8h.html">config_reader.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a0aac86d95ccb32ef52240c52d1cb0ed6">editor_enable_raw_mode</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a9f3588d65437046bb0a1545d9f68c1f1">editor_initialize</a>(<a class="code" href="structconfiguration__reader__result__t.html">configuration_reader_result_t</a> * config);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a27704e3280b55b32ff7c4192850aa472">editor_open</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> * filePath);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">editor_process_keypress</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="editor_8h.html#a5e241125e49d43bfb08d9509915dd406">editor_refresh_screen</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aeditor_8h_html_a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><div class="ttname"><a href="editor_8h.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">editor_process_keypress</a></div><div class="ttdeci">void editor_process_keypress()</div><div class="ttdef"><b>Definition:</b> editor.c:230</div></div>
-<div class="ttc" id="aeditor_8h_html_a82b504d26d915c62f6c452b9519f04e4"><div class="ttname"><a href="editor_8h.html#a82b504d26d915c62f6c452b9519f04e4">editor_show_help</a></div><div class="ttdeci">void editor_show_help()</div><div class="ttdef"><b>Definition:</b> editor.c:350</div></div>
-<div class="ttc" id="aeditor_8h_html_a5aa94b93982350084b4b63a31e3a68b1"><div class="ttname"><a href="editor_8h.html#a5aa94b93982350084b4b63a31e3a68b1">editor_initialize</a></div><div class="ttdeci">void editor_initialize()</div><div class="ttdef"><b>Definition:</b> editor.c:182</div></div>
-<div class="ttc" id="aeditor_8h_html_a5e241125e49d43bfb08d9509915dd406"><div class="ttname"><a href="editor_8h.html#a5e241125e49d43bfb08d9509915dd406">editor_refresh_screen</a></div><div class="ttdeci">void editor_refresh_screen()</div><div class="ttdef"><b>Definition:</b> editor.c:329</div></div>
-<div class="ttc" id="aeditor_8h_html_a27704e3280b55b32ff7c4192850aa472"><div class="ttname"><a href="editor_8h.html#a27704e3280b55b32ff7c4192850aa472">editor_open</a></div><div class="ttdeci">void editor_open(char const *filePath)</div><div class="ttdef"><b>Definition:</b> editor.c:199</div></div>
-<div class="ttc" id="aeditor_8h_html_a0aac86d95ccb32ef52240c52d1cb0ed6"><div class="ttname"><a href="editor_8h.html#a0aac86d95ccb32ef52240c52d1cb0ed6">editor_enable_raw_mode</a></div><div class="ttdeci">void editor_enable_raw_mode()</div><div class="ttdoc">Enables raw mode.</div><div class="ttdef"><b>Definition:</b> editor.c:150</div></div>
-<div class="ttc" id="aeditor_8h_html_ab3ebf2c1536e118dbc5afa77ac39e549"><div class="ttname"><a href="editor_8h.html#ab3ebf2c1536e118dbc5afa77ac39e549">editor_create_file</a></div><div class="ttdeci">int editor_create_file(char const *filePath)</div></div>
+<div class="ttc" id="aeditor_8h_html_a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><div class="ttname"><a href="editor_8h.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">editor_process_keypress</a></div><div class="ttdeci">void editor_process_keypress()</div><div class="ttdoc">Processes a single keypress.</div><div class="ttdef"><b>Definition:</b> editor.c:271</div></div>
+<div class="ttc" id="astructconfiguration__reader__result__t_html"><div class="ttname"><a href="structconfiguration__reader__result__t.html">configuration_reader_result_t</a></div><div class="ttdoc">Result of reading an editor configuration file.</div><div class="ttdef"><b>Definition:</b> config_reader.h:27</div></div>
+<div class="ttc" id="aeditor_8h_html_a5e241125e49d43bfb08d9509915dd406"><div class="ttname"><a href="editor_8h.html#a5e241125e49d43bfb08d9509915dd406">editor_refresh_screen</a></div><div class="ttdeci">void editor_refresh_screen()</div><div class="ttdoc">Refreshes the content that is rendered by the editor.</div><div class="ttdef"><b>Definition:</b> editor.c:370</div></div>
+<div class="ttc" id="aeditor_8h_html_a9f3588d65437046bb0a1545d9f68c1f1"><div class="ttname"><a href="editor_8h.html#a9f3588d65437046bb0a1545d9f68c1f1">editor_initialize</a></div><div class="ttdeci">void editor_initialize(configuration_reader_result_t *config)</div><div class="ttdoc">Initializes the editor.</div><div class="ttdef"><b>Definition:</b> editor.c:221</div></div>
+<div class="ttc" id="aeditor_8h_html_a27704e3280b55b32ff7c4192850aa472"><div class="ttname"><a href="editor_8h.html#a27704e3280b55b32ff7c4192850aa472">editor_open</a></div><div class="ttdeci">void editor_open(char const *filePath)</div><div class="ttdoc">Opens a file and renders the content of the file.</div><div class="ttdef"><b>Definition:</b> editor.c:240</div></div>
+<div class="ttc" id="aconfig__reader_8h_html"><div class="ttname"><a href="config__reader_8h.html">config_reader.h</a></div><div class="ttdoc">File containing the declaration of the configuration reader and the corresponding functions.</div></div>
+<div class="ttc" id="aeditor_8h_html_a0aac86d95ccb32ef52240c52d1cb0ed6"><div class="ttname"><a href="editor_8h.html#a0aac86d95ccb32ef52240c52d1cb0ed6">editor_enable_raw_mode</a></div><div class="ttdeci">void editor_enable_raw_mode()</div><div class="ttdoc">Enables raw mode for the current terminal session instead of canonical mode.</div><div class="ttdef"><b>Definition:</b> editor.c:188</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
