@@ -238,32 +238,30 @@ void editor_initialize(configuration_reader_result_t * config)
 }
 
 void editor_open(char const * filePath)
-{
+{   
+    FILE * filePointer = fopen(filePath, "r");
+    if (!filePointer) 
+    {
+        editor_set_status_message("File under the path %s not found", filePath);
+        return;
+    }
+    char * line = NULL;
+    size_t linecap = 0;
+    ssize_t linelen;
+    while ((linelen = getline(&line, &linecap, filePointer)) != -1)
+    {
+        while (linelen > 0 && (line[linelen - 1] == '\n' || line[linelen - 1] == '\r'))
+            linelen--;
+        editor_insert_row(editorConfig.numberOfRows, line, linelen);
+    }
+    free(line);
+    fclose(filePointer);
+
     free(editorConfig.fileName);
     editorConfig.fileName = strdup(filePath);
-
     // Selects syntax highlighting configuration based on file extension
     editor_select_syntax_highlight();
-    if (!access(filePath, F_OK))
-    {
-        FILE * filePointer = fopen(filePath, "r");
-        if (!filePointer)
-            editor_die("fopen");
-        char * line = NULL;
-        size_t linecap = 0;
-        ssize_t linelen;
 
-        while ((linelen = getline(&line, &linecap, filePointer)) != -1)
-        {
-            while (linelen > 0 && (line[linelen - 1] == '\n' || line[linelen - 1] == '\r'))
-                linelen--;
-            editor_insert_row(editorConfig.numberOfRows, line, linelen);
-        }
-        free(line);
-        fclose(filePointer);
-    }
-    else
-        editor_insert_newline();
     editorConfig.unsavedChanges = false;
     editorConfig.cursorCurrentX  = 0;
 }
@@ -588,7 +586,7 @@ static void editor_draw_rows(append_buffer_t * buffer)
 static void editor_draw_status_bar(append_buffer_t * buffer)
 {
     append_buffer_append_string(buffer, "\x1b[7m", 4);
-    char statusBarLeftMessage[120], StatusBarRightMessage[80], realPath[80];
+    char statusBarLeftMessage[4200], StatusBarRightMessage[80], realPath[4096];
     if(editorConfig.fileName)
         realpath(editorConfig.fileName, realPath);
     int leftMessageLength = snprintf(statusBarLeftMessage, sizeof(statusBarLeftMessage), "%.80s - %d lines %s",

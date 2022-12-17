@@ -45,8 +45,6 @@ configuration_reader_result_t * configuration_reader_read_configuration_file()
     result->messageDisplayDuration = DEFAULT_STATUS_MESSAGE_DURATION;
     char configFilePath[120];
     snprintf(configFilePath, 120, "%s/.yaterc", getenv("HOME"));
-    if(access(configFilePath, F_OK))
-        return result;
     FILE * file = fopen(configFilePath, "rb");
     if (!file)
         return result;
