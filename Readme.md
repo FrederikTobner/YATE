@@ -18,7 +18,7 @@ Yate is based on [Kilo](https://github.com/antirez/kilo) - a small text editor t
 
 ## Overview
 
-[![asciicast](https://asciinema.org/a/545859.svg)](https://asciinema.org/a/545859)
+[![asciicast](https://asciinema.org/a/546304.svg)](https://asciinema.org/a/546304)
 
 Usage:
 
