@@ -16,8 +16,6 @@ Yate is based on [Kilo](https://github.com/antirez/kilo) - a small text editor t
 * [Building](#building)
 * [License](#license)
 
-<!-- Add screencast using https://asciinema.org/ -->
-
 ## Overview
 
 [![asciicast](https://asciinema.org/a/545859.svg)](https://asciinema.org/a/545859)
@@ -40,6 +38,7 @@ Hot-Keys:
 ## Syntax Highlighting
 
 Rudimentary syntax highlighting for the following languages is provided:
+
 * C
 * C++
 * Cellox
@@ -59,10 +58,12 @@ The available settings are:
 ## Building
 
 Dependecies:
+
 * A C compiler that is compatible with the C99 standard
 * [CMake](https://cmake.org/)
 
 There is a prewritten scripts provided to build and install the editor in the scripts folder called 'install.sh'. The specified compiler and generator should probably be altered to fit your environment.
 
 ## License
+
 This project is licensed under the [GNU General Public License](LICENSE)
