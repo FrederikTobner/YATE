@@ -1,0 +1,25 @@
+/****************************************************************************
+ * Copyright (C) 2022 by Frederik Tobner                                    *
+ *                                                                          *
+ * This file is part of Yate.                                             *
+ *                                                                          *
+ * Permission to use, copy, modify, and distribute this software and its    *
+ * documentation under the terms of the GNU General Public License is       *
+ * hereby granted.                                                          *
+ * No representations are made about the suitability of this software for   *
+ * any purpose.                                                             *
+ * It is provided "as is" without express or implied warranty.              *
+ * See the <https://www.gnu.org/licenses/gpl-3.0.html/>GNU General Public   *
+ * License for more details.                                                *
+ ****************************************************************************/
+
+#ifndef PROJECT_CONFIGURATION_H_
+#define PROJECT_CONFIGURATION_H_
+
+// the configured options and settings for the Project
+#define PROJECT_VERSION_MAJOR (@YATE_VERSION_MAJOR@)
+#define PROJECT_VERSION_MINOR (@YATE_VERSION_MINOR@)
+#define PROJECT_NAME ("@PROJECT_NAME@")
+#define PROJECT_VENDOR ("@PROJECT_VENDOR@")
+
+#endif

@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "*.in": "cpp",
+        "stdlib.h": "c",
+        "unistd.h": "c",
+        "*.tcc": "c",
+        "random": "c",
+        "algorithm": "c",
+        "fstream": "c",
+        "streambuf": "c",
+        "editor.h": "c",
+        "string_view": "c",
+        "stdint.h": "c",
+        "limits.h": "c",
+        "fcntl.h": "c",
+        "atomic": "c",
+        "cstdint": "c",
+        "array": "c",
+        "functional": "c",
+        "tuple": "c",
+        "istream": "c",
+        "ostream": "c"
+    }
+}
