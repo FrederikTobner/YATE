@@ -1,7 +1,7 @@
-# Creates installer and zipped executable of the Interpreter for x64
+# Creates zipped executable of the Editor for x64
 # Configuring CMake
 echo "Configuring CMake for x64 ..."
-cmake -B ../build/linux_x64 -DCMAKE_BUILD_TYPE=Release -G Ninja  -DCMAKE_C_COMPILER=/usr/local/bin/clang ..
+cmake -B ../build/linux_x64 -DCMAKE_BUILD_TYPE=Release -G Ninja  -DCMAKE_C_COMPILER=/usr/local/bin/clang-16 ..
 echo "Building Editor for x64 ..."
 cmake --build ../build/linux_x64 --config Release --target Cellox
 # Zipping binaries

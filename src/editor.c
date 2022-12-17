@@ -464,8 +464,7 @@ static void editor_render_welcome_screen_row(append_buffer_t * buffer, uint32_t 
         welcomeMessageRowLength = snprintf(welcomeMessageRow, sizeof(welcomeMessageRow), "%s - Yet another text editor", PROJECT_NAME);
         break;
     case 1:
-        welcomeMessageRowLength = snprintf(welcomeMessageRow, sizeof(welcomeMessageRow), "");
-        break;
+        return;
     case 2:
         welcomeMessageRowLength = snprintf(welcomeMessageRow, sizeof(welcomeMessageRow), "version %d.%d", PROJECT_VERSION_MAJOR, PROJECT_VERSION_MINOR);
         break;
@@ -476,8 +475,7 @@ static void editor_render_welcome_screen_row(append_buffer_t * buffer, uint32_t 
         welcomeMessageRowLength = snprintf(welcomeMessageRow, sizeof(welcomeMessageRow), "%s is open source and freely distributable", PROJECT_NAME);
         break;
     case 5:
-        welcomeMessageRowLength = snprintf(welcomeMessageRow, sizeof(welcomeMessageRow), "");
-        break;
+        return;
     case 6:
         welcomeMessageRowLength = snprintf(welcomeMessageRow, sizeof(welcomeMessageRow), "Press \x1b[38;2;255;230;102mCtrl-q\x1b[39;49m to exit");
         break;
