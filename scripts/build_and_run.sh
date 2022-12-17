@@ -7,7 +7,7 @@ if [ -d "../build/src" ]
 then
     cd 
     echo "Executing Editor ..."
-    ../build/src/YATE
+    ../build/src/yate
 else
     echo "No Source build folder generated ..."
     exit 70
