@@ -1,7 +1,7 @@
 /****************************************************************************
  * Copyright (C) 2022 by Frederik Tobner                                    *
  *                                                                          *
- * This file is part of Yate.                                             *
+ * This file is part of Yate.                                               *
  *                                                                          *
  * Permission to use, copy, modify, and distribute this software and its    *
  * documentation under the terms of the GNU General Public License is       *
@@ -561,6 +561,8 @@ static void editor_draw_rows(append_buffer_t * buffer)
                     {
                         current_color = color;
                         char buf[36];
+                        // Change the coloring with the 32bit value using the most significant byte as a n indicator whether the for- or background is colored
+                        // The three least significant bytes are the rgb values for the for- or background coloring
                         int clen = snprintf(buf, sizeof(buf), 
                         (color & 0xff000000) ? "\x1b[48;2;%d;%d;%dm" : "\x1b[38;2;%d;%d;%dm",
                         (color & 0x00ff0000) >> 16,
@@ -621,9 +623,7 @@ static void editor_find()
     uint32_t savedRowOffset = editorConfig.rowOffset;
     char * query = editor_prompt("Search: %s (Use ESC/Arrows/Enter)", editor_find_callback);
     if (query)
-    {
         free(query);
-    }
     else
     {
         editorConfig.cursorCurrentX = savedCurrentX;
@@ -656,13 +656,9 @@ static void editor_find_callback(char * query, uint32_t key)
         return;
     }
     else if (key == ARROW_RIGHT || key == ARROW_DOWN)
-    {
         direction = 1;
-    }
     else if (key == ARROW_LEFT || key == ARROW_UP)
-    {
         direction = -1;
-    }
     else
     {
         lastMatch = -1;
@@ -738,9 +734,11 @@ static int32_t editor_get_cursor_position(uint32_t * rows, uint32_t * columns)
 /// @return -1 if an error occured, 0 if not
 static int32_t editor_get_window_size(uint32_t * rows, uint32_t * columns)
 {
-    struct winsize ws;
-    if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) == -1 || ws.ws_col == 0)
+    struct winsize windowSize;
+    // Determine window size by using the ioctl function that performs a variety of control functions on devices
+    if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &windowSize) == -1 || windowSize.ws_col == 0)
     {
+        // ioctl has failed we need to determine the window size without it's help
         // Write cursor forward and cursor down command
         if (write(STDOUT_FILENO, "\x1b[999C\x1b[999B", 12) != 12)
             return -1;
@@ -748,8 +746,8 @@ static int32_t editor_get_window_size(uint32_t * rows, uint32_t * columns)
     }
     else
     {
-        *columns = ws.ws_col;
-        *rows = ws.ws_row;
+        *columns = windowSize.ws_col;
+        *rows = windowSize.ws_row;
         return 0;
     }
 }
@@ -775,6 +773,7 @@ static void editor_insert_newline()
     }
     else
     {
+        // We need to split the current row at our current x position
         editor_row_t * row = &editorConfig.editorRows[editorConfig.cursorCurrentY];
         editor_insert_row(editorConfig.cursorCurrentY + 1, &row->chars[editorConfig.cursorCurrentX], row->size - editorConfig.cursorCurrentX);
         row = &editorConfig.editorRows[editorConfig.cursorCurrentY];

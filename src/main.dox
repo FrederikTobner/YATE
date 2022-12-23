@@ -4,7 +4,7 @@
 * Welcome to the technical documentation of the YATE text editor. <br>
 * Yate is based on <a href="https://github.com/antirez/kilo">Kilo</a> - a small text editor that is written in less than 1K lines of code. <br>
 * \section building_sec Building
-* To build the interpreter a C-Compiler, that supports the C99 standard and CMake (Version >= 3.16) is required. <br>
+* To build the editor a C-Compiler, that supports the C99 standard and CMake (Version >= 3.16) is required. <br>
 * \section license_sec License
 * Copyright &copy; 2022 by <a href="mailto:f.tobner@gmail.com">Frederik Tobner</a>. <br>
 * Permission to use, copy, modify, and distribute this software and its documentation under the terms of the GNU General Public License is hereby granted. <br>

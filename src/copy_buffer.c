@@ -1,7 +1,7 @@
 /****************************************************************************
  * Copyright (C) 2022 by Frederik Tobner                                    *
  *                                                                          *
- * This file is part of Yate.                                             *
+ * This file is part of Yate.                                               *
  *                                                                          *
  * Permission to use, copy, modify, and distribute this software and its    *
  * documentation under the terms of the GNU General Public License is       *
@@ -36,7 +36,7 @@ void copy_buffer_init(copy_buffer_t * buffer)
     buffer->buffer = NULL;
 }
 
-void copy_buffer_write(copy_buffer_t * buffer, char const * str, int length)
+void copy_buffer_write(copy_buffer_t * buffer, char const * str, uint32_t length)
 {
     char * new = malloc(length);
     if (new == NULL)
