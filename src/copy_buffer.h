@@ -1,7 +1,7 @@
 /****************************************************************************
  * Copyright (C) 2022 by Frederik Tobner                                    *
  *                                                                          *
- * This file is part of Yate.                                             *
+ * This file is part of Yate.                                               *
  *                                                                          *
  * Permission to use, copy, modify, and distribute this software and its    *
  * documentation under the terms of the GNU General Public License is       *
@@ -22,6 +22,7 @@
 #define YATE_COPY_BUFFER_H_
 
 #include <stddef.h>
+#include <stdint.h>
 
 /// Copy buffer
 typedef struct 
@@ -44,6 +45,6 @@ void copy_buffer_init(copy_buffer_t * buffer);
 /// @param buffer The buffer where the string is writen to
 /// @param str The string that is appended
 /// @param length The length of the string that is writen to the buffer
-void copy_buffer_write(copy_buffer_t * buffer, char const * str, int length);
+void copy_buffer_write(copy_buffer_t * buffer, char const * str, uint32_t length);
 
 #endif

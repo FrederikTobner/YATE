@@ -1,15 +1,13 @@
 cmake_minimum_required(VERSION 3.16)
-
 # Yet another text editor
-project(YATE VERSION 0.1.0)
+project(YATE 
+LANGUAGES C
+VERSION 0.1.0)
 include(CheckIncludeFile)
-
 # C99 standard is required to build the editor
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED True)
-
 set(PROJECT_VENDOR "Frederik Tobner")
-
 # Check dependecies under unix-like systems
 if(UNIX)
     CHECK_INCLUDE_FILE("termios.h" TERMIOS_AVAILABLE)

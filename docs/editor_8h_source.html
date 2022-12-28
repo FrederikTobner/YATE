@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>YATE: /mnt/d/Projects/C/YATE/src/editor.h Source File</title>
+<title>YATE: editor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('editor_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">editor.h</div>  </div>
@@ -73,7 +89,7 @@ $(function() {
 <a href="editor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2022 by Frederik Tobner                                    *</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *                                                                          *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This file is part of Yate.                                             *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This file is part of Yate.                                               *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *                                                                          *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Permission to use, copy, modify, and distribute this software and its    *</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * documentation under the terms of the GNU General Public License is       *</span></div>
@@ -102,18 +118,22 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aeditor_8h_html_a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><div class="ttname"><a href="editor_8h.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">editor_process_keypress</a></div><div class="ttdeci">void editor_process_keypress()</div><div class="ttdoc">Processes a single keypress.</div><div class="ttdef"><b>Definition:</b> editor.c:271</div></div>
+</div><!-- doc-content -->
+<div class="ttc" id="aeditor_8h_html_a4aeaa83a40ed8ac35aa2bdc0e5e2870d"><div class="ttname"><a href="editor_8h.html#a4aeaa83a40ed8ac35aa2bdc0e5e2870d">editor_process_keypress</a></div><div class="ttdeci">void editor_process_keypress()</div><div class="ttdoc">Processes a single keypress.</div><div class="ttdef"><b>Definition:</b> editor.c:267</div></div>
 <div class="ttc" id="astructconfiguration__reader__result__t_html"><div class="ttname"><a href="structconfiguration__reader__result__t.html">configuration_reader_result_t</a></div><div class="ttdoc">Result of reading an editor configuration file.</div><div class="ttdef"><b>Definition:</b> config_reader.h:27</div></div>
-<div class="ttc" id="aeditor_8h_html_a5e241125e49d43bfb08d9509915dd406"><div class="ttname"><a href="editor_8h.html#a5e241125e49d43bfb08d9509915dd406">editor_refresh_screen</a></div><div class="ttdeci">void editor_refresh_screen()</div><div class="ttdoc">Refreshes the content that is rendered by the editor.</div><div class="ttdef"><b>Definition:</b> editor.c:370</div></div>
-<div class="ttc" id="aeditor_8h_html_a9f3588d65437046bb0a1545d9f68c1f1"><div class="ttname"><a href="editor_8h.html#a9f3588d65437046bb0a1545d9f68c1f1">editor_initialize</a></div><div class="ttdeci">void editor_initialize(configuration_reader_result_t *config)</div><div class="ttdoc">Initializes the editor.</div><div class="ttdef"><b>Definition:</b> editor.c:221</div></div>
-<div class="ttc" id="aeditor_8h_html_a27704e3280b55b32ff7c4192850aa472"><div class="ttname"><a href="editor_8h.html#a27704e3280b55b32ff7c4192850aa472">editor_open</a></div><div class="ttdeci">void editor_open(char const *filePath)</div><div class="ttdoc">Opens a file and renders the content of the file.</div><div class="ttdef"><b>Definition:</b> editor.c:240</div></div>
+<div class="ttc" id="aeditor_8h_html_a5e241125e49d43bfb08d9509915dd406"><div class="ttname"><a href="editor_8h.html#a5e241125e49d43bfb08d9509915dd406">editor_refresh_screen</a></div><div class="ttdeci">void editor_refresh_screen()</div><div class="ttdoc">Refreshes the content that is rendered by the editor.</div><div class="ttdef"><b>Definition:</b> editor.c:372</div></div>
+<div class="ttc" id="aeditor_8h_html_a9f3588d65437046bb0a1545d9f68c1f1"><div class="ttname"><a href="editor_8h.html#a9f3588d65437046bb0a1545d9f68c1f1">editor_initialize</a></div><div class="ttdeci">void editor_initialize(configuration_reader_result_t *config)</div><div class="ttdoc">Initializes the editor.</div><div class="ttdef"><b>Definition:</b> editor.c:216</div></div>
+<div class="ttc" id="aeditor_8h_html_a27704e3280b55b32ff7c4192850aa472"><div class="ttname"><a href="editor_8h.html#a27704e3280b55b32ff7c4192850aa472">editor_open</a></div><div class="ttdeci">void editor_open(char const *filePath)</div><div class="ttdoc">Opens a file and renders the content of the file.</div><div class="ttdef"><b>Definition:</b> editor.c:238</div></div>
 <div class="ttc" id="aconfig__reader_8h_html"><div class="ttname"><a href="config__reader_8h.html">config_reader.h</a></div><div class="ttdoc">File containing the declaration of the configuration reader and the corresponding functions.</div></div>
-<div class="ttc" id="aeditor_8h_html_a0aac86d95ccb32ef52240c52d1cb0ed6"><div class="ttname"><a href="editor_8h.html#a0aac86d95ccb32ef52240c52d1cb0ed6">editor_enable_raw_mode</a></div><div class="ttdeci">void editor_enable_raw_mode()</div><div class="ttdoc">Enables raw mode for the current terminal session instead of canonical mode.</div><div class="ttdef"><b>Definition:</b> editor.c:188</div></div>
+<div class="ttc" id="aeditor_8h_html_a0aac86d95ccb32ef52240c52d1cb0ed6"><div class="ttname"><a href="editor_8h.html#a0aac86d95ccb32ef52240c52d1cb0ed6">editor_enable_raw_mode</a></div><div class="ttdeci">void editor_enable_raw_mode()</div><div class="ttdoc">Enables raw mode for the current terminal session instead of canonical mode.</div><div class="ttdef"><b>Definition:</b> editor.c:183</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="editor_8h.html">editor.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

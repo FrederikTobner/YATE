@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>YATE: /mnt/d/Projects/C/YATE/src/syntax.h Source File</title>
+<title>YATE: syntax.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('syntax_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">syntax.h</div>  </div>
@@ -73,7 +89,7 @@ $(function() {
 <a href="syntax_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2022 by Frederik Tobner                                    *</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *                                                                          *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This file is part of Yate.                                             *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This file is part of Yate.                                               *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *                                                                          *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Permission to use, copy, modify, and distribute this software and its    *</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * documentation under the terms of the GNU General Public License is       *</span></div>
@@ -95,7 +111,7 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7f">   34</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7f">editorHighlight</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7f">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fadd96620816cc58daa0570b04bcbccd44">   36</a></span>&#160;    <a class="code" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fadd96620816cc58daa0570b04bcbccd44">HIGHTLIGHT_NORMAL</a> = 0,</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7faebd02e9835fc7dbd519db135e65c9645">   37</a></span>&#160;    <a class="code" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7faebd02e9835fc7dbd519db135e65c9645">HIGHLIGHT_COMMENT</a>,</div>
@@ -107,7 +123,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa3c4f6cc054d8380b187353b808d53570">   43</a></span>&#160;    <a class="code" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa3c4f6cc054d8380b187353b808d53570">HIGHLIGHT_STRING</a>,</div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7faa01d18903accf6e404a7e22f7f80e8d2">   44</a></span>&#160;    <a class="code" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7faa01d18903accf6e404a7e22f7f80e8d2">HIGHLIGHT_NUMBER</a>,</div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa67e2edd8fe18c071cc268f600432cbba">   45</a></span>&#160;    <a class="code" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa67e2edd8fe18c071cc268f600432cbba">HIGHLIGHT_MATCH</a></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <a class="code" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7f">editorHighlight</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structeditor__syntax__t.html">   49</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
@@ -124,15 +140,17 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="syntax_8h.html#a63164cf9e8f6af3d68e8aadaf5d64f2e">syntax_get_language_count</a>();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;int32_t <a class="code" href="syntax_8h.html#afa0951954ee6b1e5f0a4bc0a0569fd80">syntax_convert_to_color</a>(<span class="keywordtype">int</span> highlightGroup);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;int32_t <a class="code" href="syntax_8h.html#a2879ee212793e35289e9e9933fa1b5e3">syntax_convert_to_color</a>(<a class="code" href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7f">editorHighlight</a> highlightGroup);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="asyntax_8h_html_ab5583f4e615b0b91c806512b59423a7f"><div class="ttname"><a href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7f">editorHighlight</a></div><div class="ttdeci">editorHighlight</div><div class="ttdoc">Differnt syntax highlighting groups of the editor.</div><div class="ttdef"><b>Definition:</b> syntax.h:34</div></div>
 <div class="ttc" id="astructeditor__syntax__t_html_a5378ebad445a96a5c635d78fa0bfa3aa"><div class="ttname"><a href="structeditor__syntax__t.html#a5378ebad445a96a5c635d78fa0bfa3aa">editor_syntax_t::filetype</a></div><div class="ttdeci">char * filetype</div><div class="ttdoc">The name of the type of file e.g. xml, Cellox.</div><div class="ttdef"><b>Definition:</b> syntax.h:52</div></div>
 <div class="ttc" id="asyntax_8h_html_aa6554fab47670038827ee09053044cb5"><div class="ttname"><a href="syntax_8h.html#aa6554fab47670038827ee09053044cb5">HighLightDataBase</a></div><div class="ttdeci">editor_syntax_t HighLightDataBase[]</div><div class="ttdoc">Syntax Highlighting database.</div><div class="ttdef"><b>Definition:</b> syntax.c:82</div></div>
 <div class="ttc" id="asyntax_8h_html_ab5583f4e615b0b91c806512b59423a7fadd96620816cc58daa0570b04bcbccd44"><div class="ttname"><a href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fadd96620816cc58daa0570b04bcbccd44">HIGHTLIGHT_NORMAL</a></div><div class="ttdeci">@ HIGHTLIGHT_NORMAL</div><div class="ttdef"><b>Definition:</b> syntax.h:36</div></div>
 <div class="ttc" id="asyntax_8h_html_ab5583f4e615b0b91c806512b59423a7faebd02e9835fc7dbd519db135e65c9645"><div class="ttname"><a href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7faebd02e9835fc7dbd519db135e65c9645">HIGHLIGHT_COMMENT</a></div><div class="ttdeci">@ HIGHLIGHT_COMMENT</div><div class="ttdef"><b>Definition:</b> syntax.h:37</div></div>
+<div class="ttc" id="asyntax_8h_html_a2879ee212793e35289e9e9933fa1b5e3"><div class="ttname"><a href="syntax_8h.html#a2879ee212793e35289e9e9933fa1b5e3">syntax_convert_to_color</a></div><div class="ttdeci">int32_t syntax_convert_to_color(editorHighlight highlightGroup)</div><div class="ttdoc">Get the rgb color value of a syntax highlighting group.</div><div class="ttdef"><b>Definition:</b> syntax.c:132</div></div>
 <div class="ttc" id="astructeditor__syntax__t_html"><div class="ttname"><a href="structeditor__syntax__t.html">editor_syntax_t</a></div><div class="ttdoc">Models a syntax for a programming language.</div><div class="ttdef"><b>Definition:</b> syntax.h:49</div></div>
 <div class="ttc" id="asyntax_8h_html_ab5583f4e615b0b91c806512b59423a7fadd78e39768ffef8b7f7b37de1495f985"><div class="ttname"><a href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fadd78e39768ffef8b7f7b37de1495f985">HIGHLIGHT_KEYWORDS_THIRD_GROUP</a></div><div class="ttdeci">@ HIGHLIGHT_KEYWORDS_THIRD_GROUP</div><div class="ttdef"><b>Definition:</b> syntax.h:41</div></div>
 <div class="ttc" id="astructeditor__syntax__t_html_ae945e4b437cd4a11774543e2c28066bd"><div class="ttname"><a href="structeditor__syntax__t.html#ae945e4b437cd4a11774543e2c28066bd">editor_syntax_t::filematch</a></div><div class="ttdeci">char ** filematch</div><div class="ttdoc">The file extension of the language.</div><div class="ttdef"><b>Definition:</b> syntax.h:54</div></div>
@@ -141,7 +159,6 @@ $(function() {
 <div class="ttc" id="asyntax_8h_html_ab5583f4e615b0b91c806512b59423a7fa2b382b9daf9f582feabde71d5b74f98e"><div class="ttname"><a href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa2b382b9daf9f582feabde71d5b74f98e">HIGHLIGHT_MLCOMMENT</a></div><div class="ttdeci">@ HIGHLIGHT_MLCOMMENT</div><div class="ttdef"><b>Definition:</b> syntax.h:38</div></div>
 <div class="ttc" id="astructeditor__syntax__t_html_a63b7c2ca4466096999a05571806d07f7"><div class="ttname"><a href="structeditor__syntax__t.html#a63b7c2ca4466096999a05571806d07f7">editor_syntax_t::singleline_comment_start</a></div><div class="ttdeci">char * singleline_comment_start</div><div class="ttdoc">Single line comment syntax of the language.</div><div class="ttdef"><b>Definition:</b> syntax.h:58</div></div>
 <div class="ttc" id="astructeditor__syntax__t_html_a8160c1258ebb7d2572bfa2d5f9f00b8c"><div class="ttname"><a href="structeditor__syntax__t.html#a8160c1258ebb7d2572bfa2d5f9f00b8c">editor_syntax_t::multiline_comment_start</a></div><div class="ttdeci">char * multiline_comment_start</div><div class="ttdoc">Start pattern of a multiline comment.</div><div class="ttdef"><b>Definition:</b> syntax.h:60</div></div>
-<div class="ttc" id="asyntax_8h_html_afa0951954ee6b1e5f0a4bc0a0569fd80"><div class="ttname"><a href="syntax_8h.html#afa0951954ee6b1e5f0a4bc0a0569fd80">syntax_convert_to_color</a></div><div class="ttdeci">int32_t syntax_convert_to_color(int highlightGroup)</div><div class="ttdoc">Get the rgb color value of a syntax highlighting group.</div><div class="ttdef"><b>Definition:</b> syntax.c:132</div></div>
 <div class="ttc" id="astructeditor__syntax__t_html_a85ab897b25046b161a3b4477e6d77482"><div class="ttname"><a href="structeditor__syntax__t.html#a85ab897b25046b161a3b4477e6d77482">editor_syntax_t::multiline_comment_end</a></div><div class="ttdeci">char * multiline_comment_end</div><div class="ttdoc">End pattern of a multiline comment.</div><div class="ttdef"><b>Definition:</b> syntax.h:62</div></div>
 <div class="ttc" id="asyntax_8h_html_ab5583f4e615b0b91c806512b59423a7fad1f1122da64f5fb44fe4ee953cbf5cae"><div class="ttname"><a href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fad1f1122da64f5fb44fe4ee953cbf5cae">HIGHLIGHT_KEYWORDS_SECOND_GROUP</a></div><div class="ttdeci">@ HIGHLIGHT_KEYWORDS_SECOND_GROUP</div><div class="ttdef"><b>Definition:</b> syntax.h:40</div></div>
 <div class="ttc" id="asyntax_8h_html_ab5583f4e615b0b91c806512b59423a7fa4a769e3326d57c268f610609a65372d3"><div class="ttname"><a href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7fa4a769e3326d57c268f610609a65372d3">HIGHLIGHT_KEYWORDS_FOURTH_GROUP</a></div><div class="ttdeci">@ HIGHLIGHT_KEYWORDS_FOURTH_GROUP</div><div class="ttdef"><b>Definition:</b> syntax.h:42</div></div>
@@ -151,10 +168,13 @@ $(function() {
 <div class="ttc" id="asyntax_8h_html_a63164cf9e8f6af3d68e8aadaf5d64f2e"><div class="ttname"><a href="syntax_8h.html#a63164cf9e8f6af3d68e8aadaf5d64f2e">syntax_get_language_count</a></div><div class="ttdeci">size_t syntax_get_language_count()</div><div class="ttdoc">Gets the amount of languages for which syntax highlighting is provided.</div><div class="ttdef"><b>Definition:</b> syntax.c:127</div></div>
 <div class="ttc" id="asyntax_8h_html_ab5583f4e615b0b91c806512b59423a7faa01d18903accf6e404a7e22f7f80e8d2"><div class="ttname"><a href="syntax_8h.html#ab5583f4e615b0b91c806512b59423a7faa01d18903accf6e404a7e22f7f80e8d2">HIGHLIGHT_NUMBER</a></div><div class="ttdeci">@ HIGHLIGHT_NUMBER</div><div class="ttdef"><b>Definition:</b> syntax.h:44</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="syntax_8h.html">syntax.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

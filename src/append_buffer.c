@@ -1,7 +1,7 @@
 /****************************************************************************
  * Copyright (C) 2022 by Frederik Tobner                                    *
  *                                                                          *
- * This file is part of Yate.                                             *
+ * This file is part of Yate.                                               *
  *                                                                          *
  * Permission to use, copy, modify, and distribute this software and its    *
  * documentation under the terms of the GNU General Public License is       *
@@ -36,4 +36,10 @@ void append_buffer_append_string(append_buffer_t * buffer, const char * str, int
 void append_buffer_free(append_buffer_t * buffer)
 {
     free(buffer->buffer);
+}
+
+void append_buffer_init(append_buffer_t * buffer)
+{
+    buffer->length = 0;
+    buffer->buffer = NULL;
 }

@@ -1,7 +1,7 @@
 /****************************************************************************
  * Copyright (C) 2022 by Frederik Tobner                                    *
  *                                                                          *
- * This file is part of Yate.                                             *
+ * This file is part of Yate.                                               *
  *                                                                          *
  * Permission to use, copy, modify, and distribute this software and its    *
  * documentation under the terms of the GNU General Public License is       *
@@ -46,12 +46,6 @@
 
 /// Control Key-Combination inputs (e.g. Ctrl-V)
 #define CTRL_KEY(k) ((k)&0x1f)
-
-/// Initializes append buffer
-#define APPENDBUFFER_INIT \
-    {             \
-        NULL, 0   \
-    }
 
 /// Models a single line that is rendered by the editor
 typedef struct
@@ -151,6 +145,7 @@ static void editor_delete_row(uint32_t);
 static void editor_draw_message_bar(append_buffer_t *);
 static void editor_draw_rows(append_buffer_t *);
 static void editor_draw_status_bar(append_buffer_t *);
+static void editor_execute();
 static void editor_find();
 static void editor_find_callback(char *, uint32_t);
 static inline void editor_free_row(editor_row_t *);
@@ -164,7 +159,7 @@ static void editor_move_cursor(uint32_t);
 static void editor_open_file();
 static void editor_open_file_callback(char *, uint32_t);
 static inline void editor_paste_line();
-static char * editor_prompt(char *, void (*)(char *, uint32_t));
+static char * editor_prompt(char * , void (*)(char *, uint32_t));
 static void editor_quit();
 static uint32_t editor_read_key();
 static void editor_render_welcome_screen_row(append_buffer_t *, uint32_t);
@@ -228,8 +223,11 @@ void editor_initialize(configuration_reader_result_t * config)
     editorConfig.fileName = NULL;
     editorConfig.statusMessage[0] = '\0';
     editorConfig.syntax = NULL;
-    if (editor_get_window_size(&editorConfig.screenRows, &editorConfig.screenColumns) == -1)
-        editor_die("editor_get_window_size");   // Could not determine window size
+    if (editor_get_window_size(&editorConfig.screenRows, &editorConfig.screenColumns) == -1) 
+    {        
+        // Could not determine window size
+        editor_die("editor_get_window_size");   
+    }
 
     // Make room for status bar and message bar
     editorConfig.screenRows -= 2;
@@ -246,13 +244,13 @@ void editor_open(char const * filePath)
         return;
     }
     char * line = NULL;
-    size_t linecap = 0;
-    ssize_t linelen;
-    while ((linelen = getline(&line, &linecap, filePointer)) != -1)
+    size_t lineCap = 0;
+    ssize_t lineLength;
+    while ((lineLength = getline(&line, &lineCap, filePointer)) != -1)
     {
-        while (linelen > 0 && (line[linelen - 1] == '\n' || line[linelen - 1] == '\r'))
-            linelen--;
-        editor_insert_row(editorConfig.numberOfRows, line, linelen);
+        while (lineLength > 0 && (line[lineLength - 1] == '\n' || line[lineLength - 1] == '\r'))
+            lineLength--;
+        editor_insert_row(editorConfig.numberOfRows, line, lineLength);
     }
     free(line);
     fclose(filePointer);
@@ -275,15 +273,6 @@ void editor_process_keypress()
     case '\r':
         editor_insert_newline();
         break;
-    // Ctrl-q quits the editor
-    case CTRL_KEY('q'):
-        editor_quit();
-        break;
-
-    // Save file
-    case CTRL_KEY('s'):
-        editor_save();
-        break;
 
     case HOME_KEY:
         editorConfig.cursorCurrentX = 0;
@@ -293,29 +282,42 @@ void editor_process_keypress()
             editorConfig.cursorCurrentX = editorConfig.editorRows[editorConfig.cursorCurrentY].size;
         break;
 
-    case CTRL_KEY('f'):
-        editor_find();
-        break;
-
-    case CTRL_KEY('h'):
-        editor_show_help();
-        break;
+    // Deletes a signle line and stores it in the copy buffer of the editor so it can be pasted later
     case CTRL_KEY('d'):
         editor_yank_line();
         editor_delete_row(editorConfig.cursorCurrentY);
         break;
-    
-    // Yank
-    case CTRL_KEY('y'):
-        editor_yank_line();
+        // Find word in file
+    case CTRL_KEY('f'):
+        editor_find();
         break;
-    // Paste
+    // Show help as status message 
+    case CTRL_KEY('h'):
+        editor_show_help();
+        break;
+    // Opens another file in the editor
+    case CTRL_KEY('o'):
+        editor_open_file();
+        break;  
+    // Pastes the content of the copy buffer
     case CTRL_KEY('p'):
         editor_paste_line();
         break;
-
-    case CTRL_KEY('o'):
-        editor_open_file();
+    // Ctrl-q quits the editor
+    case CTRL_KEY('q'):
+        editor_quit();
+        break;
+    // Save file
+    case CTRL_KEY('s'):
+        editor_save();
+        break;      
+    // Executes the file that is currently opened by the editor
+    case CTRL_KEY('x'):
+        editor_execute();
+        break;
+        // Yanks the line the cursor is currently positioned in
+    case CTRL_KEY('y'):
+        editor_yank_line();
         break;    
 
     case BACKSPACE:
@@ -324,7 +326,7 @@ void editor_process_keypress()
             editor_move_cursor(ARROW_RIGHT);
         editor_delete_character();
         break;
-
+    // Scrolling
     case PAGE_UP:
     case PAGE_DOWN:
     {
@@ -345,6 +347,7 @@ void editor_process_keypress()
     }
     break;
 
+    // Arrows
     case ARROW_UP:
     case ARROW_DOWN:
     case ARROW_LEFT:
@@ -361,7 +364,8 @@ void editor_process_keypress()
         editor_insert_character(c);
         break;
     }
-    if(c != CTRL_KEY('q'))
+    // Reseting the quit timer of the editor if the last command was not a quit command
+    if(c != CTRL_KEY('q') && editorConfig.quitTimes != QUIT_TIMES)
         editorConfig.quitTimes = QUIT_TIMES;
 }
 
@@ -369,7 +373,8 @@ void editor_refresh_screen()
 {
     editor_scroll();
 
-    append_buffer_t buffer = APPENDBUFFER_INIT;
+    append_buffer_t buffer; 
+    append_buffer_init(&buffer);
     append_buffer_append_string(&buffer, "\x1b[?25l", 6);
     append_buffer_append_string(&buffer, "\x1b[H", 3);
     editor_draw_rows(&buffer);
@@ -484,7 +489,7 @@ static void editor_render_welcome_screen_row(append_buffer_t * buffer, uint32_t 
         break;
 
     default:
-    editor_die("editor_render_welcome_screen_row");
+    editor_die("editor_render_welcome_screen_row not implmented");
         break;
     }
     if (welcomeMessageRowLength > editorConfig.screenColumns)
@@ -561,6 +566,8 @@ static void editor_draw_rows(append_buffer_t * buffer)
                     {
                         current_color = color;
                         char buf[36];
+                        // Change the coloring with the 32bit value using the most significant byte as a n indicator whether the for- or background is colored
+                        // The three least significant bytes are the rgb values for the for- or background coloring
                         int clen = snprintf(buf, sizeof(buf), 
                         (color & 0xff000000) ? "\x1b[48;2;%d;%d;%dm" : "\x1b[38;2;%d;%d;%dm",
                         (color & 0x00ff0000) >> 16,
@@ -612,6 +619,50 @@ static void editor_draw_status_bar(append_buffer_t * buffer)
     append_buffer_append_string(buffer, "\r\n", 2);
 }
 
+/// @brief Executes the currently opened file
+/// @details Currently only executing cellox, lua and python files is supported
+static void editor_execute()
+{
+    char const * commandPreFix;
+    if(!editorConfig.syntax)
+    {
+        editor_set_status_message("Unknown filetype");
+        return;
+    }
+    if(!strcmp(editorConfig.syntax->filetype, "Cellox"))
+    {
+        commandPreFix = "Cellox ";
+    }
+    else if(!strcmp(editorConfig.syntax->filetype, "Lua"))
+    {
+        commandPreFix = "lua ";
+    }
+    else if(!strcmp(editorConfig.syntax->filetype, "Python"))
+    {
+        commandPreFix = "python3 ";
+    }
+    else
+    {
+        editor_set_status_message("Executing %s files is not supported", editorConfig.syntax->filetype);
+        return;
+    }
+    // Clears the screen when the editor is quit
+    write(STDOUT_FILENO, "\x1b[2J", 4);
+    write(STDOUT_FILENO, "\x1b[H", 3);
+    editor_disable_raw_mode();
+    char command[4096];
+    command[0] = '\0';
+    strcat(command, commandPreFix);
+    strcat(command, editorConfig.fileName);
+    system(command);
+    char line[1024];
+    printf("Press enter to continue...\n");
+    fgets(line, sizeof(line), stdin);
+    
+    editor_enable_raw_mode();
+    editor_refresh_screen();
+}
+
 /// @brief Finds all occurences of a word in the currently oppend source file
 static void editor_find()
 {
@@ -621,9 +672,7 @@ static void editor_find()
     uint32_t savedRowOffset = editorConfig.rowOffset;
     char * query = editor_prompt("Search: %s (Use ESC/Arrows/Enter)", editor_find_callback);
     if (query)
-    {
         free(query);
-    }
     else
     {
         editorConfig.cursorCurrentX = savedCurrentX;
@@ -656,13 +705,9 @@ static void editor_find_callback(char * query, uint32_t key)
         return;
     }
     else if (key == ARROW_RIGHT || key == ARROW_DOWN)
-    {
         direction = 1;
-    }
     else if (key == ARROW_LEFT || key == ARROW_UP)
-    {
         direction = -1;
-    }
     else
     {
         lastMatch = -1;
@@ -738,9 +783,11 @@ static int32_t editor_get_cursor_position(uint32_t * rows, uint32_t * columns)
 /// @return -1 if an error occured, 0 if not
 static int32_t editor_get_window_size(uint32_t * rows, uint32_t * columns)
 {
-    struct winsize ws;
-    if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) == -1 || ws.ws_col == 0)
+    struct winsize windowSize;
+    // Determine window size by using the ioctl function that performs a variety of control functions on devices
+    if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &windowSize) == -1 || windowSize.ws_col == 0)
     {
+        // ioctl has failed we need to determine the window size without it's help
         // Write cursor forward and cursor down command
         if (write(STDOUT_FILENO, "\x1b[999C\x1b[999B", 12) != 12)
             return -1;
@@ -748,8 +795,8 @@ static int32_t editor_get_window_size(uint32_t * rows, uint32_t * columns)
     }
     else
     {
-        *columns = ws.ws_col;
-        *rows = ws.ws_row;
+        *columns = windowSize.ws_col;
+        *rows = windowSize.ws_row;
         return 0;
     }
 }
@@ -775,6 +822,7 @@ static void editor_insert_newline()
     }
     else
     {
+        // We need to split the current row at our current x position
         editor_row_t * row = &editorConfig.editorRows[editorConfig.cursorCurrentY];
         editor_insert_row(editorConfig.cursorCurrentY + 1, &row->chars[editorConfig.cursorCurrentX], row->size - editorConfig.cursorCurrentX);
         row = &editorConfig.editorRows[editorConfig.cursorCurrentY];
@@ -1287,7 +1335,7 @@ static void editor_set_status_message(char const * format, ...)
 /// Shows the hotkeys of the editor as a status message
 static inline void editor_show_help()
 {
-    editor_set_status_message("HELP: Ctrl-D = delete | Ctrl-F = find | Ctrl-H = help | Ctrl-O = open | Ctrl-P = paste | Ctrl-Q = quit | Ctrl-S = save | Ctrl-Y = yank");
+    editor_set_status_message("HELP: Ctrl-D = delete | Ctrl-F = find | Ctrl-H = help | Ctrl-O = open | Ctrl-P = paste | Ctrl-Q = quit | Ctrl-S = save| Ctrl-X execute | Ctrl-Y = yank");
 }
 
 /// @brief Updates the contents that are diplayed by a single editor row
@@ -1339,13 +1387,13 @@ static void editor_update_syntax(editor_row_t * row)
     size_t multiLineCommentStartLength = multiLineCommentStart ? strlen(multiLineCommentStart) : 0;
     size_t multiLineCommentEndLength = multiLineCommentEnd ? strlen(multiLineCommentEnd) : 0;
     bool previousSeperator = true;
-    bool insideString = false;
+    int insideString = 0;
     bool insideComment = (row->index > 0 && editorConfig.editorRows[row->index - 1].hightLightOpenComment);
     size_t i = 0;
     while (i < row->renderSize)
     {
         char c = row->render[i];
-        unsigned char prev_hl = (i > 0) ? row->highLight[i - 1] : HIGHTLIGHT_NORMAL;
+        unsigned char prevoiusHighlighting = (i > 0) ? row->highLight[i - 1] : HIGHTLIGHT_NORMAL;
 
         if (singleLineCommentStartLength && !insideString && !insideComment)
         {
@@ -1413,8 +1461,8 @@ static void editor_update_syntax(editor_row_t * row)
 
         if (editorConfig.syntax->flags & SYNTAX_HIGHLIGHT_NUMBERS)
         {
-            if ((isdigit(c) && (previousSeperator || prev_hl == HIGHLIGHT_NUMBER)) ||
-                (c == '.' && prev_hl == HIGHLIGHT_NUMBER))
+            if ((isdigit(c) && (previousSeperator || prevoiusHighlighting == HIGHLIGHT_NUMBER)) ||
+                (c == '.' && prevoiusHighlighting == HIGHLIGHT_NUMBER))
             {
                 row->highLight[i] = HIGHLIGHT_NUMBER;
                 i++;
@@ -1435,6 +1483,7 @@ static void editor_update_syntax(editor_row_t * row)
                     keywordLength--;
                 if (!strncmp(&row->render[i], keywords[j], keywordLength) && editor_is_separator(row->render[i + keywordLength]))
                 {
+                    // We select the color of our syntax highlighting based on the keyword group
                     if(belongsToSecondKeywordGroup)
                         memset(&row->highLight[i], HIGHLIGHT_KEYWORDS_SECOND_GROUP, keywordLength);
                     else if(belongsToThirdKeywordGroup)
@@ -1463,7 +1512,11 @@ static void editor_update_syntax(editor_row_t * row)
 }
 
 /// @brief Yanks the line the cursor is currently positioned in
+/// @details For that purpose the content of the line is stored in the copy-buffer of the editor
+/// The content of the copy buffer can be pasted afterwords
 static inline void editor_yank_line()
 {
-    copy_buffer_write(&editorConfig.copyBuffer, (char *)editorConfig.editorRows[editorConfig.cursorCurrentY].chars, editorConfig.editorRows[editorConfig.cursorCurrentY].size);
+    copy_buffer_write(&editorConfig.copyBuffer, 
+    (char *)editorConfig.editorRows[editorConfig.cursorCurrentY].chars, 
+    editorConfig.editorRows[editorConfig.cursorCurrentY].size);
 }

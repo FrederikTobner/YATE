@@ -1,7 +1,7 @@
 /****************************************************************************
  * Copyright (C) 2022 by Frederik Tobner                                    *
  *                                                                          *
- * This file is part of Yate.                                             *
+ * This file is part of Yate.                                               *
  *                                                                          *
  * Permission to use, copy, modify, and distribute this software and its    *
  * documentation under the terms of the GNU General Public License is       *
@@ -31,7 +31,7 @@
 #include <stddef.h>
 
 /// Differnt syntax highlighting groups of the editor
-enum editorHighlight
+typedef enum
 {
     HIGHTLIGHT_NORMAL = 0,
     HIGHLIGHT_COMMENT,
@@ -43,7 +43,7 @@ enum editorHighlight
     HIGHLIGHT_STRING,
     HIGHLIGHT_NUMBER,
     HIGHLIGHT_MATCH
-};
+} editorHighlight;
 
 /// Models a syntax for a programming language
 typedef struct 
@@ -75,6 +75,6 @@ size_t syntax_get_language_count();
 /// @param highlightGroup The highlight group where the corresponding color value is determined
 /// @return A 32 bit value where the 3 least significant bytes control the displayed color and 
 /// the most significant bit is used to detetemnine whether the highlighting applies to the fore- or the background.
-int32_t syntax_convert_to_color(int highlightGroup);
+int32_t syntax_convert_to_color(editorHighlight highlightGroup);
 
 #endif

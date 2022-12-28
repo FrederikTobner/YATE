@@ -1,7 +1,7 @@
 /****************************************************************************
  * Copyright (C) 2022 by Frederik Tobner                                    *
  *                                                                          *
- * This file is part of Yate.                                             *
+ * This file is part of Yate.                                               *
  *                                                                          *
  * Permission to use, copy, modify, and distribute this software and its    *
  * documentation under the terms of the GNU General Public License is       *
@@ -38,7 +38,7 @@ static void printSettings();
 /// @brief Main entry point of the editor
 /// @param argc The amount of arguments that were specified by the user
 /// @param argv The arguments that were spepcified by the user
-/// @return  0 (Unreachable)
+/// @return 0 (Unreachable)
 int main(int argc, char const ** argv)
 {
     if (argc >= 2)
@@ -84,17 +84,19 @@ int main(int argc, char const ** argv)
     return 0;
 }
 
+/// @brief 
 static void printConsoleHelp()
 {
     printf("%s version %d.%d\n", PROJECT_NAME, PROJECT_VERSION_MAJOR, PROJECT_VERSION_MINOR);
     printf("Usage yate <option> <filepath>\n\n");
     printf("Options\n");
-    printf("  -c, --config\t\tShows configurable setttings of the editor\n");
+    printf("  -c, --config\t\tShows configurable settings of the editor\n");
     printf("  -h, --help\t\tDisplay this help\n");
     printf("  -k, --key\t\tShows hotkeys of the editor\n");
     printf("  -v, --version\t\tShows the version of the installed editor\n");
 }
 
+/// @brief 
 static void printHotKeys()
 {
     printf("HotKeys\n");
@@ -105,9 +107,11 @@ static void printHotKeys()
     printf("  ctrl-p\t\tPaste last yanked content\n");
     printf("  ctrl-q\t\tExit the editor\n");
     printf("  ctrl-s\t\tSaves the currently opened file\n");
+    printf("  ctrl-x\t\tExecute the currently opened file\n");
     printf("  ctrl-y\t\tYank the current line\n");
 }
 
+/// @brief 
 static void printSettings()
 {
     printf("Settings\n");

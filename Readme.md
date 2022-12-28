@@ -33,6 +33,7 @@ Hot-Keys:
     ctrl-p = Paste last yanked content
     ctrl-q = Exit the editor
     ctrl-s = Saves the currently opened file
+    ctrl-x = Yank the current line
     ctrl-y = Yank the current line
 
 ## Syntax Highlighting
