@@ -37,3 +37,9 @@ void append_buffer_free(append_buffer_t * buffer)
 {
     free(buffer->buffer);
 }
+
+void append_buffer_init(append_buffer_t * buffer)
+{
+    buffer->length = 0;
+    buffer->buffer = NULL;
+}

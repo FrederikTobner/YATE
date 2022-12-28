@@ -42,4 +42,8 @@ void append_buffer_append_string(append_buffer_t * buffer, char const * str, int
 /// @param buffer the append buffer that is freed
 void append_buffer_free(append_buffer_t * buffer);
 
+/// @brief Initializes a append buffer
+/// @param buffer The append buffer that is initialized
+void append_buffer_init(append_buffer_t * buffer);
+
 #endif

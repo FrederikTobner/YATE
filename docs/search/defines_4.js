@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quit_5ftimes_314',['QUIT_TIMES',['../editor_8c.html#a03d3f54c622fea475aef39f7195ec842',1,'editor.c']]]
+  ['syntax_5fhighlight_5fnumbers_317',['SYNTAX_HIGHLIGHT_NUMBERS',['../syntax_8h.html#a1eb9acfb72ba50e03c0a87bc1e7dcfb0',1,'syntax.h']]],
+  ['syntax_5fhighlight_5fstrings_318',['SYNTAX_HIGHLIGHT_STRINGS',['../syntax_8h.html#ae71a1480aaba7bc26cfb37869f569d4e',1,'syntax.h']]]
 ];

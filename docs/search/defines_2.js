@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ctrl_5fkey_311',['CTRL_KEY',['../editor_8c.html#a6ad38d024c3548be5f50d7fc0679664a',1,'editor.c']]]
+  ['default_5fstatus_5fmessage_5fduration_314',['DEFAULT_STATUS_MESSAGE_DURATION',['../config__reader_8c.html#ad1cf6fd60fe90089282d4751e9984015',1,'config_reader.c']]],
+  ['default_5ftab_5fstop_5fsize_315',['DEFAULT_TAB_STOP_SIZE',['../config__reader_8c.html#ac07e1d348f21a475a80304c5d14862a4',1,'config_reader.c']]]
 ];
