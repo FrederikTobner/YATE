@@ -58,6 +58,20 @@ char * GoKeywords[] = {
     "nil|", "true|", "false|", "error|", "err|", "int|", "int32|", "int64|", "uint|", "uint32|", "uint64|", "string|", "bool|", NULL
 };
 
+
+char * JBASICFileExtensions[] = {".bas", NULL};
+
+char * JBASICKeywords[] = {
+    // JBASIC keywords
+    "LET", "DIM", "CLS", "INPUT", "PRINT", "NOT", "MOD", "IF", "THEN", "ELSE", "END", "FOR", "TO", "NEXT", 
+    "WHILE", "REPEAT", "UNTIL", "DO", "SWITCH", "CASE", "GOTO", "SUB", "CALL",
+    "let", "dim", "cls", "input", "print", "not", "mod", "if", "then", "else", "end", "for", "to", "next", 
+    "while", "repeat", "until", "do", "switch", "case", "goto", "sub", "call", 
+    // JBASIC built in functions
+    "ABS|", "ACS|", "ASH|", "ASN|", "ATH|", "ATN|", "AVG|", "COS|", "EXP|", "LOG|", 
+    "MAX|", "MIN|", "SIN|", "SQR|", "SUM|", "TAN|", "LIST|", "RND|", "VAL|", "LEN|", NULL
+};
+
 char * LuaFileExtensions[] = {".lua", NULL};
 
 char * LuaKeywords[] =
@@ -106,6 +120,13 @@ editor_syntax_t HighLightDataBase[] = {
         GoFileExtensions,
         GoKeywords,
         "#", "", "",
+        SYNTAX_HIGHLIGHT_NUMBERS | SYNTAX_HIGHLIGHT_STRINGS
+    },
+    {
+        "JBASIC",
+        JBASICFileExtensions,
+        JBASICKeywords,
+        "REM", "", "",
         SYNTAX_HIGHLIGHT_NUMBERS | SYNTAX_HIGHLIGHT_STRINGS
     },
     {

@@ -620,7 +620,7 @@ static void editor_draw_status_bar(append_buffer_t * buffer)
 }
 
 /// @brief Executes the currently opened file
-/// @details Currently only executing cellox, lua and python files is supported
+/// @details Currently only executing cellox, jbasic lua and python files is supported
 static void editor_execute()
 {
     char const * commandPreFix;
@@ -632,6 +632,10 @@ static void editor_execute()
     if(!strcmp(editorConfig.syntax->filetype, "Cellox"))
     {
         commandPreFix = "Cellox ";
+    }
+    else if(!strcmp(editorConfig.syntax->filetype, "JBASIC"))
+    {
+        commandPreFix = "JBASIC ";
     }
     else if(!strcmp(editorConfig.syntax->filetype, "Lua"))
     {
