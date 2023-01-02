@@ -26,15 +26,17 @@ Usage:
 
 Hot-Keys:
 
-    ctrl-d = Yanks and deletes the current line
-    ctrl-f = Find occurences in file
-    ctrl-h = Shows help
-    ctrl-o = Opens file
-    ctrl-p = Paste last yanked content
-    ctrl-q = Exit the editor
-    ctrl-s = Saves the currently opened file
-    ctrl-x = Yank the current line
-    ctrl-y = Yank the current line
+|Hot-Key  | Description                         |
+|---------|-------------------------------------|
+|ctrl-d   | Yanks and deletes the current line  |
+|ctrl-f   | Find occurences in file             |
+|ctrl-h   | Shows help                          |
+|ctrl-o   | Opens file                          |
+|ctrl-p   | Paste last yanked content           |
+|ctrl-q   | Exit the editor                     |
+|ctrl-s   | Saves the currently opened file     |
+|ctrl-x   | Execute the currently opened file   |
+|ctrl-y   | Yank the current line               |
 
 ## Syntax Highlighting
 

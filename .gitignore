@@ -1,4 +1,5 @@
-# Ignore build folder
+# CMAKE
 [Bb][Uu][Ii][Ll][Dd]/
-# Ignore vscode folder
+# VSCode
 .[Vv][Ss][Cc][Oo][Dd][Ee]/
+# Clang

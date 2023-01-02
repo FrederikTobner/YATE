@@ -1517,6 +1517,6 @@ static void editor_update_syntax(editor_row_t * row)
 static inline void editor_yank_line()
 {
     copy_buffer_write(&editorConfig.copyBuffer, 
-    (char *)editorConfig.editorRows[editorConfig.cursorCurrentY].chars, 
-    editorConfig.editorRows[editorConfig.cursorCurrentY].size);
+        (char *)editorConfig.editorRows[editorConfig.cursorCurrentY].chars, 
+        editorConfig.editorRows[editorConfig.cursorCurrentY].size);
 }
