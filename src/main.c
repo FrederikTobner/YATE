@@ -84,7 +84,7 @@ int main(int argc, char const ** argv)
     return 0;
 }
 
-/// @brief 
+/// @brief Displays the help of the editor in the console
 static void printConsoleHelp()
 {
     printf("%s version %d.%d\n", PROJECT_NAME, PROJECT_VERSION_MAJOR, PROJECT_VERSION_MINOR);
@@ -96,7 +96,7 @@ static void printConsoleHelp()
     printf("  -v, --version\t\tShows the version of the installed editor\n");
 }
 
-/// @brief 
+/// @brief Displays the available hotkeys of the editor
 static void printHotKeys()
 {
     printf("HotKeys\n");
@@ -111,7 +111,7 @@ static void printHotKeys()
     printf("  ctrl-y\t\tYank the current line\n");
 }
 
-/// @brief 
+/// @brief Displays the configurable settings of the editor
 static void printSettings()
 {
     printf("Settings\n");
