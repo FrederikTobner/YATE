@@ -1,7 +1,7 @@
-# configure cellox config to show version
+# configure yate config to show version
 configure_file(project_config.h.in project_config.h)
 
-set(EDITOR_SOURCES
+set(EDITOR_SOURCE_FILES
 append_buffer.c
 copy_buffer.c
 config_reader.c
@@ -10,7 +10,7 @@ main.c
 syntax.c
 )
 
-set(EDITOR_HEADERS
+set(EDITOR_HEADER_FILES
 append_buffer.h
 config_reader.h
 copy_buffer.h
@@ -25,8 +25,8 @@ else()
 endif()
 
 string(TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWERCASE)
-add_executable(${PROJECT_NAME_LOWERCASE} ${EDITOR_SOURCES} ${EDITOR_HEADERS}) 
-# for including the cellox_config.h file
+add_executable(${PROJECT_NAME_LOWERCASE} ${EDITOR_SOURCE_FILES} ${EDITOR_HEADER_FILES}) 
+# for including the project_config.h file
 target_include_directories(${PROJECT_NAME_LOWERCASE} PUBLIC ${PROJECT_BINARY_DIR}/src)
 
 if(NOT CMAKE_BUILD_TYPE MATCHES "[Dd][Ee][Bb][Uu][Gg]")

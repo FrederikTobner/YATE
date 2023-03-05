@@ -22,9 +22,9 @@
 #define _BSD_SOURCE
 #define _GNU_SOURCE
 
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
 
 #include "config_reader.h"

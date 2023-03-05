@@ -5,7 +5,6 @@ echo "Building Editor ..."
 cmake --build ../build --config Debug
 if [ -d "../build/src" ]
 then
-    cd 
     echo "Executing Editor ..."
     ../build/src/yate
 else
