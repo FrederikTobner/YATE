@@ -15,7 +15,8 @@
 
 /**
  * @file copy_buffer.h
- * @brief File containing the declaration of the copy buffer and the corresponding functions.
+ * @brief File containing the declaration of the copy buffer and the
+ * corresponding functions.
  */
 
 #ifndef YATE_COPY_BUFFER_H_
@@ -25,26 +26,25 @@
 #include <stdint.h>
 
 /// Copy buffer
-typedef struct 
-{
-    /// The underlying character buffer
-    char * buffer;
-    /// The length of the character buffer
-    size_t length;
+typedef struct {
+  /// The underlying character buffer
+  char *buffer;
+  /// The length of the character buffer
+  size_t length;
 } copy_buffer_t;
 
 /// @brief Frees the copy buffer
 /// @param buffer the copy buffer that is freed
-void copy_buffer_free(copy_buffer_t * buffer);
+void copy_buffer_free(copy_buffer_t *buffer);
 
 /// @brief Initializes a copy buffer
 /// @param buffer The copy buffer that is initialized
-void copy_buffer_init(copy_buffer_t * buffer);
+void copy_buffer_init(copy_buffer_t *buffer);
 
 /// @brief Writes a string to an copy buffer
 /// @param buffer The buffer where the string is writen to
 /// @param str The string that is appended
 /// @param length The length of the string that is writen to the buffer
-void copy_buffer_write(copy_buffer_t * buffer, char const * str, uint32_t length);
+void copy_buffer_write(copy_buffer_t *buffer, char const *str, uint32_t length);
 
 #endif

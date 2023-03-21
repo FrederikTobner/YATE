@@ -23,15 +23,16 @@
 
 #include "config_reader.h"
 
-/// @brief Enables raw mode for the current terminal session instead of canonical mode
+/// @brief Enables raw mode for the current terminal session instead of
+/// canonical mode
 void editor_enable_raw_mode();
 
 /// @brief Initializes the editor
-void editor_initialize(configuration_reader_result_t * config);
+void editor_initialize(configuration_reader_result_t *config);
 
 /// @brief Opens a file and renders the content of the file
 /// @param filePath The path of the file that is opened, read and rendered
-void editor_open(char const * filePath);
+void editor_open(char const *filePath);
 
 /// @brief Processes a single keypress
 void editor_process_keypress();

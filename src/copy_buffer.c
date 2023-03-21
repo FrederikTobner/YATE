@@ -20,30 +20,28 @@
 
 #include "copy_buffer.h"
 
-#include <stdlib.h>
 #include <stddef.h>
+#include <stdlib.h>
 #include <string.h>
 
-void copy_buffer_free(copy_buffer_t * buffer)
-{
+void copy_buffer_free(copy_buffer_t *buffer) {
+  free(buffer->buffer);
+  copy_buffer_init(buffer);
+}
+
+void copy_buffer_init(copy_buffer_t *buffer) {
+  buffer->length = 0;
+  buffer->buffer = NULL;
+}
+
+void copy_buffer_write(copy_buffer_t *buffer, char const *str,
+                       uint32_t length) {
+  char *new = malloc(length);
+  if (new == NULL)
+    return;
+  memcpy(new, str, length);
+  if (buffer->buffer)
     free(buffer->buffer);
-    copy_buffer_init(buffer);
-}
-
-void copy_buffer_init(copy_buffer_t * buffer)
-{
-    buffer->length = 0;
-    buffer->buffer = NULL;
-}
-
-void copy_buffer_write(copy_buffer_t * buffer, char const * str, uint32_t length)
-{
-    char * new = malloc(length);
-    if (new == NULL)
-        return;
-    memcpy(new, str, length);
-    if(buffer->buffer)
-        free(buffer->buffer);
-    buffer->buffer = new;
-    buffer->length = length;
+  buffer->buffer = new;
+  buffer->length = length;
 }

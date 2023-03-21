@@ -15,7 +15,8 @@
 
 /**
  * @file append_buffer.h
- * @brief File containing the declaration of the append buffer and the corresponding functions.
+ * @brief File containing the declaration of the append buffer and the
+ * corresponding functions.
  */
 
 #ifndef YATE_APPEND_BUFFER_H_
@@ -24,26 +25,26 @@
 #include <stddef.h>
 
 /// Append buffer
-typedef struct 
-{
-    /// Pointer to the underlying buffer
-    char * buffer;
-    /// The length of the buffer
-    size_t length;
+typedef struct {
+  /// Pointer to the underlying buffer
+  char *buffer;
+  /// The length of the buffer
+  size_t length;
 } append_buffer_t;
 
 /// @brief Appends a string to an append buffer
 /// @param buffer The buffer where the string is appended
 /// @param str The string that is appended
 /// @param length The length of the string that is appended
-void append_buffer_append_string(append_buffer_t * buffer, char const * str, int length);
+void append_buffer_append_string(append_buffer_t *buffer, char const *str,
+                                 int length);
 
 /// @brief Frees the append buffer
 /// @param buffer the append buffer that is freed
-void append_buffer_free(append_buffer_t * buffer);
+void append_buffer_free(append_buffer_t *buffer);
 
 /// @brief Initializes a append buffer
 /// @param buffer The append buffer that is initialized
-void append_buffer_init(append_buffer_t * buffer);
+void append_buffer_init(append_buffer_t *buffer);
 
 #endif
