@@ -33,34 +33,34 @@
 
 /// Differnt syntax highlighting groups of the editor
 typedef enum {
-  HIGHTLIGHT_NORMAL = 0,
-  HIGHLIGHT_COMMENT,
-  HIGHLIGHT_MLCOMMENT,
-  HIGHLIGHT_KEYWORDS_FIRST_GROUP,
-  HIGHLIGHT_KEYWORDS_SECOND_GROUP,
-  HIGHLIGHT_KEYWORDS_THIRD_GROUP,
-  HIGHLIGHT_KEYWORDS_FOURTH_GROUP,
-  HIGHLIGHT_STRING,
-  HIGHLIGHT_NUMBER,
-  HIGHLIGHT_MATCH
+    HIGHTLIGHT_NORMAL = 0,
+    HIGHLIGHT_COMMENT,
+    HIGHLIGHT_MLCOMMENT,
+    HIGHLIGHT_KEYWORDS_FIRST_GROUP,
+    HIGHLIGHT_KEYWORDS_SECOND_GROUP,
+    HIGHLIGHT_KEYWORDS_THIRD_GROUP,
+    HIGHLIGHT_KEYWORDS_FOURTH_GROUP,
+    HIGHLIGHT_STRING,
+    HIGHLIGHT_NUMBER,
+    HIGHLIGHT_MATCH
 } editorHighlight;
 
 /// Models a syntax for a programming language
 typedef struct {
-  /// The name of the type of file e.g. xml, Cellox
-  char *filetype;
-  /// The file extension of the language
-  char **filematch;
-  /// The keywords of the language
-  char **keywords;
-  /// Single line comment syntax of the language
-  char *singleline_comment_start;
-  /// Start pattern of a multiline comment
-  char *multiline_comment_start;
-  /// End pattern of a multiline comment
-  char *multiline_comment_end;
-  /// General Language flags (e.g higlight all strings / numbers)
-  uint32_t flags;
+    /// The name of the type of file e.g. xml, Cellox
+    char * filetype;
+    /// The file extension of the language
+    char ** filematch;
+    /// The keywords of the language
+    char ** keywords;
+    /// Single line comment syntax of the language
+    char * singleline_comment_start;
+    /// Start pattern of a multiline comment
+    char * multiline_comment_start;
+    /// End pattern of a multiline comment
+    char * multiline_comment_end;
+    /// General Language flags (e.g higlight all strings / numbers)
+    uint32_t flags;
 } editor_syntax_t;
 
 /// Syntax Highlighting database

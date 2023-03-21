@@ -1,0 +1,21 @@
+---
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+AlignEscapedNewlines: Left
+AllowAllArgumentsOnNextLine: true
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterReturnType: None
+ColumnLimit: 120
+IndentWidth: 4
+IndentCaseBlocks: true
+InsertBraces: true
+PointerAlignment: Middle
+SpaceBeforeAssignmentOperators: true
+UseTab: Never
