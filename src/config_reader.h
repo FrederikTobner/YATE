@@ -15,7 +15,8 @@
 
 /**
  * @file config_reader.h
- * @brief File containing the declaration of the configuration reader and the corresponding functions.
+ * @brief File containing the declaration of the configuration reader and the
+ * corresponding functions.
  */
 
 #ifndef YATE_CONFIGURATION_READER_H_
@@ -24,16 +25,17 @@
 #include "stddef.h"
 
 /// Result of reading an editor configuration file
-typedef struct
-{
-  /// The size of a tabstop converted to whitespaces
-  size_t tabStopSize;
-  /// The amount of seconds a message is diplayed within the editor, before it dissappears
-  size_t messageDisplayDuration;
+typedef struct {
+    /// The size of a tabstop converted to whitespaces
+    size_t tabStopSize;
+    /// The amount of seconds a message is diplayed within the editor, before it
+    /// dissappears
+    size_t messageDisplayDuration;
 } configuration_reader_result_t;
 
 /// Parses the editor configuration file located at the users home directory
-/// @return The configuration in the editor configuration file converted to a configuration_reader_result_t
+/// @return The configuration in the editor configuration file converted to a
+/// configuration_reader_result_t
 configuration_reader_result_t * configuration_reader_read_configuration_file();
 
 #endif

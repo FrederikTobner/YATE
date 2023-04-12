@@ -23,7 +23,8 @@
 
 #include "config_reader.h"
 
-/// @brief Enables raw mode for the current terminal session instead of canonical mode
+/// @brief Enables raw mode for the current terminal session instead of
+/// canonical mode
 void editor_enable_raw_mode();
 
 /// @brief Initializes the editor

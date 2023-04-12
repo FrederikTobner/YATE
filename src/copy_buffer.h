@@ -15,7 +15,8 @@
 
 /**
  * @file copy_buffer.h
- * @brief File containing the declaration of the copy buffer and the corresponding functions.
+ * @brief File containing the declaration of the copy buffer and the
+ * corresponding functions.
  */
 
 #ifndef YATE_COPY_BUFFER_H_
@@ -25,8 +26,7 @@
 #include <stdint.h>
 
 /// Copy buffer
-typedef struct 
-{
+typedef struct {
     /// The underlying character buffer
     char * buffer;
     /// The length of the character buffer

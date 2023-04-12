@@ -15,7 +15,8 @@
 
 /**
  * @file append_buffer.h
- * @brief File containing the declaration of the append buffer and the corresponding functions.
+ * @brief File containing the declaration of the append buffer and the
+ * corresponding functions.
  */
 
 #ifndef YATE_APPEND_BUFFER_H_
@@ -24,8 +25,7 @@
 #include <stddef.h>
 
 /// Append buffer
-typedef struct 
-{
+typedef struct {
     /// Pointer to the underlying buffer
     char * buffer;
     /// The length of the buffer
