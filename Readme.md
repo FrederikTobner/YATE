@@ -45,6 +45,7 @@ Rudimentary syntax highlighting for the following languages is provided:
 * C
 * C++
 * [Cellox](https://github.com/FrederikTobner/Cellox)
+* [CHIP-8](https://github.com/FrederikTobner/CHIP-8)
 * Go
 * [JBASIC](https://github.com/FrederikTobner/JBASIC)
 * Lua

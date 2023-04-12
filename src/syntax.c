@@ -60,6 +60,11 @@ char * CelloxFileExtensions[] = {".clx", NULL};
 
 char * CelloxKeywords[] = {"if",   "else",  "for",   "while", "return", "and",    "or",   "null",
                            "this", "super", "false", "true",  "fun|",   "class|", "var|", NULL};
+char * Chip8FileExtensions[] = {".cp8", NULL};
+
+char * Chip8Keywords[] = {"NOP",  "EXT",  "CLS",  "TGS",  "RET", "JMP",  "CAL",  "SKE",  "SKNE", "MOV",
+                          "MOVO", "MOVA", "MOVX", "MOVS", "ADD", "SUB",  "STLS", "MOVS", "STMS", "JRB",
+                          "RND",  "DSP",  "PRT",  "SKP",  "STK", "STBC", "STMR", "FMR"};
 
 char * GoFileExtensions[] = {".go", NULL};
 
@@ -105,6 +110,7 @@ editor_syntax_t HighLightDataBase[] = {
     {"C++", CPPFileExtensions, CPPKeywords, "//", "/*", "*/", SYNTAX_HIGHLIGHT_NUMBERS | SYNTAX_HIGHLIGHT_STRINGS},
     {"Cellox", CelloxFileExtensions, CelloxKeywords, "//", "/*", "*/",
      SYNTAX_HIGHLIGHT_NUMBERS | SYNTAX_HIGHLIGHT_STRINGS},
+    {"CHIP-8", Chip8FileExtensions, Chip8Keywords, "#", "", "", SYNTAX_HIGHLIGHT_NUMBERS},
     {"Go", GoFileExtensions, GoKeywords, "#", "", "", SYNTAX_HIGHLIGHT_NUMBERS | SYNTAX_HIGHLIGHT_STRINGS},
     {"JBASIC", JBASICFileExtensions, JBASICKeywords, "REM", "", "",
      SYNTAX_HIGHLIGHT_NUMBERS | SYNTAX_HIGHLIGHT_STRINGS},
