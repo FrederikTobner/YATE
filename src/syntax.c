@@ -62,9 +62,10 @@ char * CelloxKeywords[] = {"if",   "else",  "for",   "while", "return", "and",  
                            "this", "super", "false", "true",  "fun|",   "class|", "var|", NULL};
 char * Chip8FileExtensions[] = {".cp8", NULL};
 
-char * Chip8Keywords[] = {"NOP",  "EXT",  "CLS",  "TGS",  "RET", "JMP",  "CAL",  "SKE",  "SKNE", "MOV",
-                          "MOVO", "MOVA", "MOVX", "MOVS", "ADD", "SUB",  "STLS", "MOVS", "STMS", "JRB",
-                          "RND",  "DSP",  "PRT",  "SKP",  "STK", "STBC", "STMR", "FMR"};
+char * Chip8Keywords[] = {"NOP",  "EXT",  "CLS",  "TGS", "RET",  "JMP",  "CAL",  "SKE", "SKNE", "MOV", "MOVO", "MOVA",
+                          "MOVX", "MOVS", "ADD",  "SUB", "STLS", "MOVS", "STMS", "JRB", "RND",  "DSP", "PRT",  "SKP",
+                          "STK",  "STBC", "STMR", "FMR", "V0|",  "V1|",  "V2|",  "V3|", "V4|",  "V5|", "V6|",  "V7|",
+                          "V8|",  "V9|",  "VA|",  "VB|", "VC|",  "VD|",  "VE|",  "VF|", "DT|",  "ST|", "I|",   NULL};
 
 char * GoFileExtensions[] = {".go", NULL};
 
