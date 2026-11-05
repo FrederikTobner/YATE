@@ -45,7 +45,7 @@ char * CPPKeywords[] = {"switch",
                         "class",
                         "case",
                         "private",
-                        "public"
+                        "public",
                         "int|",
                         "long|",
                         "double|",
@@ -58,8 +58,10 @@ char * CPPKeywords[] = {"switch",
 
 char * CelloxFileExtensions[] = {".clx", NULL};
 
-char * CelloxKeywords[] = {"if",   "else",  "for",   "while", "return", "and",    "or",   "null",
-                           "this", "super", "false", "true",  "fun|",   "class|", "var|", NULL};
+char * CelloxKeywords[] = {"and",     "break", "catch",  "continue", "do",     "else",  "false", "for",   "if",
+                           "iferror", "must",  "null",   "or",       "return", "super", "this",  "throw", "true",
+                           "import", "from", "export", "try", "while", 
+                           "class|", "error|",   "fun|",   "var|",  NULL};
 char * Chip8FileExtensions[] = {".cp8", NULL};
 
 char * Chip8Keywords[] = {"NOP",  "EXT",  "CLS",  "TGS",  "RET", "JMP",  "CAL",  "SKE",  "SKNE", "MOV",
@@ -129,7 +131,6 @@ int32_t syntax_convert_to_color(editorHighlight highlightGroup) {
         return (90 << 16) | (90 << 8) | 90;
     case HIGHLIGHT_KEYWORDS_FIRST_GROUP:
         return (211 << 16) | (33 << 8) | 45;
-        ;
     case HIGHLIGHT_KEYWORDS_SECOND_GROUP:
         return (55 << 16) | (187 << 8) | 255;
     case HIGHLIGHT_KEYWORDS_THIRD_GROUP:
