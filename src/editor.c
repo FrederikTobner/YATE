@@ -24,6 +24,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <limits.h>
+#include <signal.h>
 #include <stdarg.h>
 #include <stdbool.h>
 #include <stdint.h>
@@ -32,6 +33,7 @@
 #include <string.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <termios.h>
 #include <time.h>
 #include <unistd.h>
@@ -146,6 +148,7 @@ static void editor_draw_message_bar(append_buffer_t *);
 static void editor_draw_rows(append_buffer_t *);
 static void editor_draw_status_bar(append_buffer_t *);
 static void editor_execute();
+static int editor_run_interpreter(char const *, char const *);
 static void editor_find();
 static void editor_find_callback(char *, uint32_t);
 static inline void editor_free_row(editor_row_t *);
@@ -613,23 +616,81 @@ static void editor_draw_status_bar(append_buffer_t * buffer) {
     append_buffer_append_string(buffer, "\r\n", 2);
 }
 
+/// @brief Runs an interpreter with a file as its only argument, without
+/// involving a shell, so the file name can not be interpreted as a command
+/// @param interpreter The interpreter that is looked up in the PATH
+/// @param filePath The path of the file that is passed to the interpreter
+/// @return The exit status of the interpreter, or -1 if it could not be
+/// started or waited for
+static int editor_run_interpreter(char const * interpreter, char const * filePath) {
+    // Prevents the interpreter from treating the file name as an option
+    char * prefixedPath = NULL;
+    if (filePath[0] == '-') {
+        size_t length = strlen(filePath) + 3;
+        prefixedPath = malloc(length);
+        if (!prefixedPath) {
+            errno = ENOMEM;
+            return -1;
+        }
+        snprintf(prefixedPath, length, "./%s", filePath);
+        filePath = prefixedPath;
+    }
+    char * const argv[] = {(char *)interpreter, (char *)filePath, NULL};
+
+    // Like system() the editor ignores SIGINT and SIGQUIT while the child runs,
+    // so Ctrl-C only interrupts the executed program
+    struct sigaction ignore, oldInt, oldQuit;
+    ignore.sa_handler = SIG_IGN;
+    sigemptyset(&ignore.sa_mask);
+    ignore.sa_flags = 0;
+    sigaction(SIGINT, &ignore, &oldInt);
+    sigaction(SIGQUIT, &ignore, &oldQuit);
+
+    int result = -1;
+    pid_t pid = fork();
+    if (pid == 0) {
+        sigaction(SIGINT, &oldInt, NULL);
+        sigaction(SIGQUIT, &oldQuit, NULL);
+        execvp(interpreter, argv);
+        // Only reached if execvp failed
+        int savedErrno = errno;
+        fprintf(stderr, "Failed to execute %s: %s\n", interpreter, strerror(savedErrno));
+        _exit(127);
+    } else if (pid > 0) {
+        int status;
+        pid_t waited;
+        while ((waited = waitpid(pid, &status, 0)) == -1 && errno == EINTR) {
+        }
+        if (waited == pid) {
+            result = WIFEXITED(status) ? WEXITSTATUS(status) : 128 + WTERMSIG(status);
+        }
+    }
+
+    int savedErrno = errno;
+    sigaction(SIGINT, &oldInt, NULL);
+    sigaction(SIGQUIT, &oldQuit, NULL);
+    free(prefixedPath);
+    errno = savedErrno;
+    return result;
+}
+
 /// @brief Executes the currently opened file
-/// @details Currently only executing cellox, jbasic lua and python files is
+/// @details Currently only executing cellox, jbasic, lua and python files is
 /// supported
 static void editor_execute() {
-    char const * commandPreFix;
+    char const * interpreter;
     if (!editorConfig.syntax) {
         editor_set_status_message("Unknown filetype");
         return;
     }
     if (!strcmp(editorConfig.syntax->filetype, "Cellox")) {
-        commandPreFix = "Cellox ";
+        interpreter = "Cellox";
     } else if (!strcmp(editorConfig.syntax->filetype, "JBASIC")) {
-        commandPreFix = "JBASIC ";
+        interpreter = "JBASIC";
     } else if (!strcmp(editorConfig.syntax->filetype, "Lua")) {
-        commandPreFix = "lua ";
+        interpreter = "lua";
     } else if (!strcmp(editorConfig.syntax->filetype, "Python")) {
-        commandPreFix = "python3 ";
+        interpreter = "python3";
     } else {
         editor_set_status_message("Executing %s files is not supported", editorConfig.syntax->filetype);
         return;
@@ -638,11 +699,10 @@ static void editor_execute() {
     write(STDOUT_FILENO, "\x1b[2J", 4);
     write(STDOUT_FILENO, "\x1b[H", 3);
     editor_disable_raw_mode();
-    char command[4096];
-    command[0] = '\0';
-    strcat(command, commandPreFix);
-    strcat(command, editorConfig.fileName);
-    system(command);
+    int status = editor_run_interpreter(interpreter, editorConfig.fileName);
+    if (status == -1) {
+        printf("Failed to execute %s: %s\n", interpreter, strerror(errno));
+    }
     char line[1024];
     printf("Press enter to continue...\n");
     fgets(line, sizeof(line), stdin);
